@@ -1,0 +1,35 @@
+[project]
+name = "nvidia-startup-ai-radar"
+version = "0.1.0"
+description = "LangGraph multi-agent pipeline for the NVIDIA Startup AI Radar case."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "langgraph>=0.2.60",
+  "pydantic>=2.7",
+  "python-dotenv>=1.0",
+  "requests>=2.32",
+  "trafilatura>=1.9",
+  "langchain-core>=0.3",
+  "langchain-openai>=0.2",
+  "langchain-nvidia-ai-endpoints>=0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+nvidia-radar = "nvidia_startup_ai_radar.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
