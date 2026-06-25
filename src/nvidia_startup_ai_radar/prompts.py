@@ -70,8 +70,9 @@ CLASSIFIER_PROMPT = AgentPrompt(
     ),
     user_template=(
         "StartupProfile atual:\n{profile}\n\n"
-        "Gere score_maturidade_ia 0-100, classificacao e listas de sinais com "
-        "evidencia_trecho e fonte_url."
+        "Gere score_maturidade_ia 0-100, score_componentes explicaveis, "
+        "score_wrapper_risco, explicacao_classificacao, classificacao e listas "
+        "de sinais com evidencia_trecho e fonte_url."
     ),
 )
 

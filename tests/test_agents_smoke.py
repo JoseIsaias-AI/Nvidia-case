@@ -36,5 +36,36 @@ def test_offline_agent_sequence_generates_briefing():
         state.update(node(state))
 
     assert state["profile"]["classificacao"] in {"AI-native", "AI-enabled"}
+    assert state["profile"]["score_componentes"]
     assert state["profile"]["recomendacoes_nvidia"]
     assert "Briefing NVIDIA Startup AI Radar" in state["briefing_pt"]
+
+
+def test_classifier_flags_thin_wrapper_risk():
+    state = {
+        "profile": {
+            "nome": "PDFBuddy",
+            "setor": "IA generativa",
+            "produto_descricao": (
+                "Produto de chat com PDF powered by GPT-4, construido como wrapper "
+                "sobre OpenAI API, sem vagas tecnicas e apenas vendas/growth."
+            ),
+            "evidencias": [
+                {
+                    "fonte_url": "local://test",
+                    "trecho_resumido": (
+                        "Produto de chat com PDF powered by GPT-4, construido como wrapper "
+                        "sobre OpenAI API, sem vagas tecnicas e apenas vendas/growth."
+                    ),
+                }
+            ],
+        }
+    }
+
+    result = classifier_agent(state)
+    profile = result["profile"]
+
+    assert profile["classificacao"] == "non-AI"
+    assert profile["score_wrapper_risco"] >= 35
+    assert profile["sinais_wrapper_risco"]
+    assert any(component["tipo"] == "negativo" for component in profile["score_componentes"])

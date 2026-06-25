@@ -25,6 +25,14 @@ class SignalEvidence(BaseModel):
     data_coleta: str = Field(default_factory=utc_now_iso)
 
 
+class ScoreComponent(BaseModel):
+    componente: str
+    tipo: Literal["positivo", "negativo", "neutro"]
+    pontos: float
+    justificativa: str
+    evidencias: list[SignalEvidence] = Field(default_factory=list)
+
+
 class Recommendation(BaseModel):
     tecnologia: str
     justificativa_tecnica: str
@@ -67,6 +75,9 @@ class StartupProfile(BaseModel):
     stack_tecnica_detectada: list[str] = Field(default_factory=list)
     stack_concorrente_detectada: list[str] = Field(default_factory=list)
     score_maturidade_ia: float = 0.0
+    score_componentes: list[ScoreComponent] = Field(default_factory=list)
+    score_wrapper_risco: float = 0.0
+    explicacao_classificacao: str | None = None
     classificacao: Literal["AI-native", "AI-enabled", "non-AI", "indeterminado"] = (
         "indeterminado"
     )

@@ -17,6 +17,7 @@ from nvidia_startup_ai_radar.schemas import (
     JudgeResult,
     RawPage,
     Recommendation,
+    ScoreComponent,
     SignalEvidence,
     StartupProfile,
     utc_now_iso,
@@ -193,8 +194,21 @@ def extractor_agent(state: AgentState) -> AgentState:
     return {"profile": profile.model_dump()}
 
 
-def _signal(source: str, sinal: str, text: str) -> SignalEvidence:
-    snippet = text[:240] if text else sinal
+def _evidence_snippet(text: str, keywords: list[str], fallback: str) -> str:
+    if not text:
+        return fallback
+    lower = text.lower()
+    positions = [lower.find(keyword.lower()) for keyword in keywords if keyword.lower() in lower]
+    positions = [position for position in positions if position >= 0]
+    if not positions:
+        return text[:240]
+    start = max(0, min(positions) - 90)
+    end = min(len(text), min(positions) + 220)
+    return text[start:end].strip()
+
+
+def _signal(source: str, sinal: str, text: str, keywords: list[str]) -> SignalEvidence:
+    snippet = _evidence_snippet(text, keywords, sinal)
     return SignalEvidence(sinal=sinal, evidencia_trecho=snippet, fonte_url=source)
 
 
@@ -213,45 +227,157 @@ def classifier_agent(state: AgentState) -> AgentState:
     lower = text.lower()
     source = profile.evidencias[0].fonte_url if profile.evidencias else "local"
     native_rules = {
-        "modelo/dataset proprietario": ["modelo proprietario", "dataset proprietario", "fine-tuning", "treinamos"],
-        "infraestrutura GPU ou self-hosted": ["gpu", "self-hosted", "triton", "tensorrt", "cuda", "nvidia"],
-        "time tecnico de IA": ["ml engineer", "mlops", "data engineer", "platform engineer"],
-        "setor regulado": ["lgpd", "bacen", "anvisa", "hipaa", "healthtech", "fintech", "saude", "credito"],
-        "integracao profunda": ["erp", "crm", "ehr", "core bancario", "prontuario"],
-        "automacao de processo": ["automacao", "workflow", "processo", "operacoes"],
-        "P&D ou parceria academica": ["p&d", "universidade", "universidades", "pesquisa"],
-        "IA aplicada ao produto central": ["visao computacional", "computer vision", "deteccao", "predicao"],
+        "modelo/dataset proprietario": {
+            "keywords": ["modelo proprietario", "dataset proprietario", "fine-tuning", "treinamos"],
+            "points": 22,
+            "why": "Indica diferenciacao tecnica defensavel, nao apenas interface sobre modelo de terceiro.",
+        },
+        "infraestrutura GPU ou self-hosted": {
+            "keywords": ["gpu", "self-hosted", "triton", "tensorrt", "cuda", "nvidia"],
+            "points": 18,
+            "why": "Sinal de maturidade operacional para inferencia, custo e latencia.",
+        },
+        "intencao de contratacao tecnica": {
+            "keywords": [
+                "vaga",
+                "hiring",
+                "contratando",
+                "ml engineer",
+                "mlops",
+                "data engineer",
+                "platform engineer",
+                "inference engineer",
+            ],
+            "points": 14,
+            "why": "Vagas tecnicas sugerem investimento continuo em capacidade interna de IA.",
+        },
+        "setor regulado": {
+            "keywords": ["lgpd", "bacen", "anvisa", "hipaa", "healthtech", "fintech", "saude", "credito"],
+            "points": 10,
+            "why": "Setores regulados tendem a exigir governanca, dados proprietarios e integracao real.",
+        },
+        "integracao profunda": {
+            "keywords": ["erp", "crm", "ehr", "core bancario", "prontuario"],
+            "points": 14,
+            "why": "Integracao com sistema critico e mais dificil de copiar que uma UI generica.",
+        },
+        "automacao de processo": {
+            "keywords": ["automacao", "workflow", "processo", "operacoes"],
+            "points": 10,
+            "why": "Automacao de trabalho/processo aponta para IA no produto, nao so assistente lateral.",
+        },
+        "P&D ou parceria academica": {
+            "keywords": ["p&d", "universidade", "universidades", "pesquisa"],
+            "points": 14,
+            "why": "P&D e parceria academica reforcam profundidade tecnica e barreira de entrada.",
+        },
+        "IA aplicada ao produto central": {
+            "keywords": ["visao computacional", "computer vision", "deteccao", "predicao", "monitoramento"],
+            "points": 12,
+            "why": "A IA aparece como mecanismo central de entrega de valor.",
+        },
     }
     wrapper_rules = {
-        "diferencial baseado em GPT sem camada propria": ["powered by gpt", "chatgpt", "gpt-4", "wrapper"],
-        "produto facilmente replicavel": ["chat com pdf", "gerador de post", "resumo de documentos"],
-        "dependencia de API externa": ["openai api", "anthropic api", "api externa", "unica api"],
-        "pivots frequentes": ["pivot", "mudou de produto", "novo posicionamento"],
+        "diferencial baseado em GPT sem camada propria": {
+            "keywords": ["powered by gpt", "chatgpt", "gpt-4", "wrapper"],
+            "points": -22,
+            "why": "Diferencial comunicado parece depender do modelo-base, sem camada propria evidente.",
+        },
+        "produto facilmente replicavel": {
+            "keywords": ["chat com pdf", "gerador de post", "resumo de documentos"],
+            "points": -18,
+            "why": "Categoria vulneravel a virar recurso nativo de provedores de modelo.",
+        },
+        "dependencia de API externa": {
+            "keywords": ["openai api", "anthropic api", "api externa", "unica api"],
+            "points": -16,
+            "why": "Dependencia de uma unica API reduz defensibilidade e poder de negociacao.",
+        },
+        "pivots frequentes": {
+            "keywords": ["pivot", "mudou de produto", "novo posicionamento"],
+            "points": -12,
+            "why": "Mudancas frequentes sem mercado travado aumentam risco de wrapper fino.",
+        },
+        "ausencia de contratacao tecnica": {
+            "keywords": ["sem vagas tecnicas", "apenas vendas", "somente growth", "so marketing"],
+            "points": -10,
+            "why": "Ausencia explicita de contratacao tecnica enfraquece tese de capacidade interna.",
+        },
     }
 
     native_signals: list[SignalEvidence] = []
     wrapper_signals: list[SignalEvidence] = []
-    for label, keywords in native_rules.items():
+    score_components: list[ScoreComponent] = []
+    positive_score = 0.0
+    wrapper_risk_score = 0.0
+    for label, rule in native_rules.items():
+        keywords = rule["keywords"]
         if any(keyword in lower for keyword in keywords):
-            native_signals.append(_signal(source, label, text))
-    for label, keywords in wrapper_rules.items():
+            signal = _signal(source, label, text, keywords)
+            native_signals.append(signal)
+            positive_score += float(rule["points"])
+            score_components.append(
+                ScoreComponent(
+                    componente=label,
+                    tipo="positivo",
+                    pontos=float(rule["points"]),
+                    justificativa=rule["why"],
+                    evidencias=[signal],
+                )
+            )
+    for label, rule in wrapper_rules.items():
+        keywords = rule["keywords"]
         if any(keyword in lower for keyword in keywords):
-            wrapper_signals.append(_signal(source, label, text))
+            signal = _signal(source, label, text, keywords)
+            wrapper_signals.append(signal)
+            wrapper_risk_score += abs(float(rule["points"]))
+            score_components.append(
+                ScoreComponent(
+                    componente=label,
+                    tipo="negativo",
+                    pontos=float(rule["points"]),
+                    justificativa=rule["why"],
+                    evidencias=[signal],
+                )
+            )
 
-    score = min(100, (len(native_signals) * 18) + (8 if profile.stack_tecnica_detectada else 0))
-    score = max(0, score - (len(wrapper_signals) * 15))
-    if score >= 60 and len(native_signals) >= 3:
+    if profile.stack_tecnica_detectada:
+        stack_signal = SignalEvidence(
+            sinal="stack tecnica detectada",
+            evidencia_trecho=", ".join(profile.stack_tecnica_detectada),
+            fonte_url=source,
+        )
+        positive_score += 8
+        score_components.append(
+            ScoreComponent(
+                componente="bonus por stack tecnica detectada",
+                tipo="positivo",
+                pontos=8,
+                justificativa="Tecnologias tecnicas citadas ajudam a diferenciar maturidade real de mensagem comercial.",
+                evidencias=[stack_signal],
+            )
+        )
+
+    score = max(0.0, min(100.0, positive_score - wrapper_risk_score))
+    if score >= 60 and len(native_signals) >= 3 and wrapper_risk_score < 35:
         classification = "AI-native"
+        explanation = "Ha varios sinais tecnicos fortes e risco wrapper controlado."
+    elif wrapper_risk_score >= 35 and positive_score < 35:
+        classification = "non-AI"
+        explanation = "Predominam sinais de wrapper/API externa sem evidencias tecnicas suficientes."
     elif score >= 30 or native_signals:
         classification = "AI-enabled"
-    elif wrapper_signals and not native_signals:
-        classification = "non-AI"
+        explanation = "Ha sinais de uso de IA, mas ainda faltam evidencias para cravar AI-native."
     else:
         classification = "indeterminado"
+        explanation = "As evidencias publicas sao insuficientes para uma classificacao confiavel."
 
     profile.sinais_ai_native = native_signals
     profile.sinais_wrapper_risco = wrapper_signals
     profile.score_maturidade_ia = float(score)
+    profile.score_componentes = score_components
+    profile.score_wrapper_risco = float(wrapper_risk_score)
+    profile.explicacao_classificacao = explanation
     profile.classificacao = classification
     profile.ultima_atualizacao = utc_now_iso()
     return {"profile": profile.model_dump()}
@@ -420,6 +546,10 @@ def briefing_agent(state: AgentState) -> AgentState:
     )
     native_lines = "\n".join(f"- {signal.sinal}: {signal.evidencia_trecho[:180]}" for signal in profile.sinais_ai_native) or "- Sem sinais fortes validados."
     wrapper_lines = "\n".join(f"- {signal.sinal}: {signal.evidencia_trecho[:180]}" for signal in profile.sinais_wrapper_risco) or "- Nenhum sinal critico validado."
+    score_lines = "\n".join(
+        f"- {component.pontos:+.0f} {component.componente}: {component.justificativa}"
+        for component in profile.score_componentes
+    ) or "- Sem componentes suficientes para pontuar."
     cases = "\n".join(
         f"- {case['case_id']} ({case['tipo']}): {case['licao']}" for case in profile.casos_similares
     ) or "- Sem caso similar forte."
@@ -429,9 +559,14 @@ def briefing_agent(state: AgentState) -> AgentState:
 ## Diagnostico
 - Classificacao: {profile.classificacao}
 - Score de maturidade de IA: {profile.score_maturidade_ia:.0f}/100
+- Score de risco wrapper: {profile.score_wrapper_risco:.0f}/100
 - Setor: {profile.setor or "Nao identificado"}
 - Revisao humana antes do envio: {review}
 - Confianca do judge: {judge.confianca:.2f}
+- Explicacao: {profile.explicacao_classificacao or "Nao informada."}
+
+## Componentes do score
+{score_lines}
 
 ## Evidencias AI-native
 {native_lines}
