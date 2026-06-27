@@ -10,6 +10,7 @@ from nvidia_startup_ai_radar.agents import (
     scraper_agent,
     search_planner_agent,
 )
+from nvidia_startup_ai_radar.storage import list_recent_runs, save_run
 
 
 def test_offline_agent_sequence_generates_briefing():
@@ -69,3 +70,36 @@ def test_classifier_flags_thin_wrapper_risk():
     assert profile["score_wrapper_risco"] >= 35
     assert profile["sinais_wrapper_risco"]
     assert any(component["tipo"] == "negativo" for component in profile["score_componentes"])
+
+
+def test_save_run_persists_structured_profile(tmp_path):
+    db_path = tmp_path / "profiles.sqlite"
+    state = {
+        "output_language": "pt",
+        "human_review_required": False,
+        "errors": [],
+        "briefing_pt": "# Briefing NVIDIA Startup AI Radar: Noleak",
+        "profile": {
+            "id": "noleak",
+            "nome": "Noleak",
+            "setor": "Seguranca",
+            "origem": "outbound",
+            "classificacao": "AI-native",
+            "score_maturidade_ia": 72,
+            "score_wrapper_risco": 0,
+            "evidencias": [
+                {
+                    "fonte_url": "local://test",
+                    "trecho_resumido": "Noleak usa NVIDIA GPUs e Triton.",
+                }
+            ],
+        },
+    }
+
+    run_id = save_run(state, db_path)
+    recent = list_recent_runs(db_path)
+
+    assert run_id == 1
+    assert recent[0]["nome"] == "Noleak"
+    assert recent[0]["classificacao"] == "AI-native"
+    assert recent[0]["score_maturidade_ia"] == 72

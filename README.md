@@ -40,6 +40,18 @@ Execute um fluxo offline:
 nvidia-radar --query "Noleak usa NVIDIA GPUs, TensorRT e Triton Inference Server para visao computacional em cameras de seguranca, com P&D em universidades."
 ```
 
+Salve o `StartupProfile` estruturado e o briefing em SQLite:
+
+```powershell
+nvidia-radar --query "Noleak usa NVIDIA GPUs, TensorRT e Triton Inference Server para visao computacional em cameras de seguranca, com P&D em universidades." --save-profile
+```
+
+Liste execucoes persistidas:
+
+```powershell
+nvidia-radar --list-runs
+```
+
 Ou via modulo:
 
 ```powershell
@@ -63,6 +75,8 @@ Copie `.env.example` para `.env` ou exporte variaveis no shell.
 - Com `OPENAI_API_KEY`, usa `ChatOpenAI` como fallback.
 - `RADAR_ENABLE_WEB_FETCH=true` habilita coleta HTTP com `requests` +
   `trafilatura`. O padrao e `false` para evitar scraping acidental.
+- `--save-profile` persiste o resultado em `data/radar_profiles.sqlite` por
+  padrao. Use `--profile-db caminho\arquivo.sqlite` para escolher outro local.
 
 ## Estrutura
 
@@ -73,6 +87,7 @@ src/nvidia_startup_ai_radar/
   prompts.py         # prompts de todos os agentes
   schemas.py         # StartupProfile, evidencias, recomendacoes e estado
   knowledge_base.py  # seed de tecnologias NVIDIA e case bank
+  storage.py         # persistencia SQLite local de perfis e briefings
   scraping.py        # fetch publico MVP
   llm.py             # adaptador opcional de LLM
   cli.py             # entrada de linha de comando
@@ -80,7 +95,7 @@ src/nvidia_startup_ai_radar/
 
 ## Proximos passos naturais
 
-- Persistir `StartupProfile` em Postgres.
+- Migrar a persistencia SQLite de `StartupProfile` para Postgres.
 - Migrar `KNOWLEDGE_ENTRIES` e `HISTORICAL_CASES` para Qdrant + BM25.
 - Adicionar Playwright/Firecrawl como fallback do `scraper`.
 - Criar dashboard Streamlit para consulta e exportacao de briefings.

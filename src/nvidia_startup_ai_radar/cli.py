@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from nvidia_startup_ai_radar.graph import build_graph
+from nvidia_startup_ai_radar.storage import DEFAULT_DB_PATH, list_recent_runs, save_run
 
 
 def _load_inbound(path: str | None) -> dict[str, Any] | None:
@@ -27,7 +28,26 @@ def main() -> None:
         help="Briefing language. pt is canonical.",
     )
     parser.add_argument("--json", action="store_true", help="Print full final state as JSON.")
+    parser.add_argument(
+        "--save-profile",
+        action="store_true",
+        help="Persist the final StartupProfile and briefing in a local SQLite store.",
+    )
+    parser.add_argument(
+        "--profile-db",
+        default=str(DEFAULT_DB_PATH),
+        help="SQLite path used by --save-profile or --list-runs.",
+    )
+    parser.add_argument(
+        "--list-runs",
+        action="store_true",
+        help="List recent persisted profile runs and exit.",
+    )
     args = parser.parse_args()
+
+    if args.list_runs:
+        print(json.dumps(list_recent_runs(args.profile_db), ensure_ascii=False, indent=2))
+        return
 
     inbound_profile = _load_inbound(args.inbound_json)
     if not args.query and not inbound_profile:
@@ -42,10 +62,16 @@ def main() -> None:
             "errors": [],
         }
     )
+    saved_run_id = save_run(final_state, args.profile_db) if args.save_profile else None
     if args.json:
+        if saved_run_id is not None:
+            final_state["saved_run_id"] = saved_run_id
+            final_state["profile_db"] = args.profile_db
         print(json.dumps(final_state, ensure_ascii=False, indent=2))
     else:
         print(final_state.get("briefing_en") or final_state.get("briefing_pt", ""))
+        if saved_run_id is not None:
+            print(f"\nPerfil salvo no SQLite em {args.profile_db} (run_id={saved_run_id}).")
 
 
 if __name__ == "__main__":
