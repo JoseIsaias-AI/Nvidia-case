@@ -13,6 +13,7 @@ dependencies = [
   "langchain-core>=0.3",
   "langchain-openai>=0.2",
   "langchain-nvidia-ai-endpoints>=0.3",
+  "streamlit>=1.38",
 ]
 
 [project.optional-dependencies]
@@ -22,6 +23,7 @@ dev = [
 
 [project.scripts]
 nvidia-radar = "nvidia_startup_ai_radar.cli:main"
+nvidia-radar-dashboard = "nvidia_startup_ai_radar.dashboard:launch"
 
 [build-system]
 requires = ["setuptools>=68"]

@@ -10,7 +10,7 @@ from nvidia_startup_ai_radar.agents import (
     scraper_agent,
     search_planner_agent,
 )
-from nvidia_startup_ai_radar.storage import list_recent_runs, save_run
+from nvidia_startup_ai_radar.storage import get_run, list_recent_runs, save_run
 
 
 def test_offline_agent_sequence_generates_briefing():
@@ -103,3 +103,50 @@ def test_save_run_persists_structured_profile(tmp_path):
     assert recent[0]["nome"] == "Noleak"
     assert recent[0]["classificacao"] == "AI-native"
     assert recent[0]["score_maturidade_ia"] == 72
+
+    detailed = get_run(run_id, db_path)
+    assert detailed is not None
+    assert detailed["profile"]["id"] == "noleak"
+    assert detailed["briefing_pt"].startswith("# Briefing NVIDIA")
+
+
+def test_list_recent_runs_filters_by_classification_and_review(tmp_path):
+    db_path = tmp_path / "profiles.sqlite"
+    base_state = {
+        "output_language": "pt",
+        "errors": [],
+        "briefing_pt": "# Briefing NVIDIA Startup AI Radar",
+        "profile": {
+            "nome": "PDFBuddy",
+            "setor": "IA generativa",
+            "origem": "outbound",
+            "classificacao": "non-AI",
+            "score_maturidade_ia": 0,
+            "score_wrapper_risco": 66,
+            "evidencias": [{"fonte_url": "local://test", "trecho_resumido": "wrapper"}],
+        },
+    }
+    save_run({**base_state, "human_review_required": True}, db_path)
+    save_run(
+        {
+            **base_state,
+            "human_review_required": False,
+            "profile": {
+                **base_state["profile"],
+                "nome": "Noleak",
+                "setor": "Seguranca",
+                "classificacao": "AI-enabled",
+                "score_maturidade_ia": 52,
+                "score_wrapper_risco": 0,
+            },
+        },
+        db_path,
+    )
+
+    review_runs = list_recent_runs(db_path, human_review_required=True)
+    ai_enabled_runs = list_recent_runs(db_path, classificacao="AI-enabled")
+    search_runs = list_recent_runs(db_path, search="noleak")
+
+    assert [run["nome"] for run in review_runs] == ["PDFBuddy"]
+    assert [run["nome"] for run in ai_enabled_runs] == ["Noleak"]
+    assert [run["nome"] for run in search_runs] == ["Noleak"]

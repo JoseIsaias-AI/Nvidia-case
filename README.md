@@ -52,6 +52,19 @@ Liste execucoes persistidas:
 nvidia-radar --list-runs
 ```
 
+Abra o dashboard local:
+
+```powershell
+nvidia-radar-dashboard
+```
+
+Ou diretamente com Streamlit:
+
+```powershell
+$env:PYTHONPATH="src"
+streamlit run src\nvidia_startup_ai_radar\dashboard.py
+```
+
 Ou via modulo:
 
 ```powershell
@@ -88,6 +101,8 @@ src/nvidia_startup_ai_radar/
   schemas.py         # StartupProfile, evidencias, recomendacoes e estado
   knowledge_base.py  # seed de tecnologias NVIDIA e case bank
   storage.py         # persistencia SQLite local de perfis e briefings
+  pipeline.py        # runner compartilhado por CLI e dashboard
+  dashboard.py       # interface Streamlit para rodar e explorar analises
   scraping.py        # fetch publico MVP
   llm.py             # adaptador opcional de LLM
   cli.py             # entrada de linha de comando
@@ -98,4 +113,4 @@ src/nvidia_startup_ai_radar/
 - Migrar a persistencia SQLite de `StartupProfile` para Postgres.
 - Migrar `KNOWLEDGE_ENTRIES` e `HISTORICAL_CASES` para Qdrant + BM25.
 - Adicionar Playwright/Firecrawl como fallback do `scraper`.
-- Criar dashboard Streamlit para consulta e exportacao de briefings.
+- Adicionar exportacao de briefing em PDF/slide a partir do dashboard.

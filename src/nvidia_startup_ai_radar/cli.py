@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from nvidia_startup_ai_radar.graph import build_graph
+from nvidia_startup_ai_radar.pipeline import run_radar
 from nvidia_startup_ai_radar.storage import DEFAULT_DB_PATH, list_recent_runs, save_run
 
 
@@ -43,24 +43,44 @@ def main() -> None:
         action="store_true",
         help="List recent persisted profile runs and exit.",
     )
+    parser.add_argument("--limit", type=int, default=20, help="Max rows for --list-runs.")
+    parser.add_argument(
+        "--classification",
+        choices=["AI-native", "AI-enabled", "non-AI", "indeterminado"],
+        help="Filter --list-runs by classification.",
+    )
+    parser.add_argument("--sector", help="Filter --list-runs by sector.")
+    parser.add_argument(
+        "--human-review-only",
+        action="store_true",
+        help="Only show persisted runs that require human review.",
+    )
     args = parser.parse_args()
 
     if args.list_runs:
-        print(json.dumps(list_recent_runs(args.profile_db), ensure_ascii=False, indent=2))
+        print(
+            json.dumps(
+                list_recent_runs(
+                    args.profile_db,
+                    limit=args.limit,
+                    classificacao=args.classification,
+                    setor=args.sector,
+                    human_review_required=True if args.human_review_only else None,
+                ),
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
         return
 
     inbound_profile = _load_inbound(args.inbound_json)
     if not args.query and not inbound_profile:
         parser.error("Provide --query or --inbound-json.")
 
-    graph = build_graph()
-    final_state = graph.invoke(
-        {
-            "query": args.query or "",
-            "inbound_profile": inbound_profile or {},
-            "output_language": args.output_language,
-            "errors": [],
-        }
+    final_state = run_radar(
+        query=args.query or "",
+        inbound_profile=inbound_profile,
+        output_language=args.output_language,
     )
     saved_run_id = save_run(final_state, args.profile_db) if args.save_profile else None
     if args.json:

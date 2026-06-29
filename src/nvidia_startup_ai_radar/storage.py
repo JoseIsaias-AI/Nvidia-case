@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 import sqlite3
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from nvidia_startup_ai_radar.schemas import AgentState, StartupProfile, utc_now_iso
 
@@ -20,6 +20,15 @@ DEFAULT_DB_PATH = Path("data") / "radar_profiles.sqlite"
 
 def _json_dumps(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, default=str)
+
+
+def _json_loads(value: str | None, fallback: Any) -> Any:
+    if not value:
+        return fallback
+    try:
+        return json.loads(value)
+    except json.JSONDecodeError:
+        return fallback
 
 
 def _connect(db_path: str | Path) -> sqlite3.Connection:
@@ -115,13 +124,34 @@ def save_run(
 def list_recent_runs(
     db_path: str | Path = DEFAULT_DB_PATH,
     limit: int = 20,
+    classificacao: str | None = None,
+    setor: str | None = None,
+    human_review_required: bool | None = None,
+    search: str | None = None,
 ) -> list[dict[str, Any]]:
     """Return recent persisted runs for dashboards, audits or quick inspection."""
 
     initialize_store(db_path)
+    filters: list[str] = []
+    params: list[Any] = []
+    if classificacao:
+        filters.append("classificacao = ?")
+        params.append(classificacao)
+    if setor:
+        filters.append("setor = ?")
+        params.append(setor)
+    if human_review_required is not None:
+        filters.append("human_review_required = ?")
+        params.append(int(human_review_required))
+    if search:
+        filters.append("(LOWER(nome) LIKE ? OR LOWER(COALESCE(setor, '')) LIKE ?)")
+        search_term = f"%{search.lower()}%"
+        params.extend([search_term, search_term])
+
+    where_clause = f"WHERE {' AND '.join(filters)}" if filters else ""
     with _connect(db_path) as connection:
         rows = connection.execute(
-            """
+            f"""
             SELECT
                 run_id,
                 startup_id,
@@ -135,9 +165,69 @@ def list_recent_runs(
                 output_language,
                 created_at
             FROM startup_profile_runs
+            {where_clause}
             ORDER BY run_id DESC
             LIMIT ?
             """,
-            (limit,),
+            (*params, limit),
         ).fetchall()
     return [dict(row) for row in rows]
+
+
+def get_run(
+    run_id: int,
+    db_path: str | Path = DEFAULT_DB_PATH,
+) -> dict[str, Any] | None:
+    """Return one persisted run with parsed profile and error payloads."""
+
+    initialize_store(db_path)
+    with _connect(db_path) as connection:
+        row = connection.execute(
+            """
+            SELECT
+                run_id,
+                startup_id,
+                nome,
+                setor,
+                origem,
+                classificacao,
+                score_maturidade_ia,
+                score_wrapper_risco,
+                human_review_required,
+                output_language,
+                profile_json,
+                briefing_pt,
+                briefing_en,
+                errors_json,
+                created_at
+            FROM startup_profile_runs
+            WHERE run_id = ?
+            """,
+            (run_id,),
+        ).fetchone()
+    if row is None:
+        return None
+    result = dict(row)
+    result["profile"] = _json_loads(result.pop("profile_json", None), {})
+    result["errors"] = _json_loads(result.pop("errors_json", None), [])
+    result["human_review_required"] = bool(result["human_review_required"])
+    return result
+
+
+def list_distinct_values(
+    column: Literal["classificacao", "setor", "origem"],
+    db_path: str | Path = DEFAULT_DB_PATH,
+) -> list[str]:
+    """List stored values for dashboard filters."""
+
+    initialize_store(db_path)
+    with _connect(db_path) as connection:
+        rows = connection.execute(
+            f"""
+            SELECT DISTINCT {column}
+            FROM startup_profile_runs
+            WHERE {column} IS NOT NULL AND TRIM({column}) != ''
+            ORDER BY {column}
+            """
+        ).fetchall()
+    return [str(row[column]) for row in rows]
