@@ -10,6 +10,7 @@ from nvidia_startup_ai_radar.agents import (
     scraper_agent,
     search_planner_agent,
 )
+from nvidia_startup_ai_radar.exporting import export_run, markdown_to_pdf_bytes
 from nvidia_startup_ai_radar.storage import get_run, list_recent_runs, save_run
 
 
@@ -150,3 +151,32 @@ def test_list_recent_runs_filters_by_classification_and_review(tmp_path):
     assert [run["nome"] for run in review_runs] == ["PDFBuddy"]
     assert [run["nome"] for run in ai_enabled_runs] == ["Noleak"]
     assert [run["nome"] for run in search_runs] == ["Noleak"]
+
+
+def test_export_run_writes_markdown_and_pdf(tmp_path):
+    db_path = tmp_path / "profiles.sqlite"
+    state = {
+        "output_language": "pt",
+        "human_review_required": False,
+        "errors": [],
+        "briefing_pt": "# Briefing NVIDIA Startup AI Radar: Noleak\n\n## Diagnostico\n- OK",
+        "profile": {
+            "nome": "Noleak",
+            "setor": "Seguranca",
+            "origem": "outbound",
+            "classificacao": "AI-enabled",
+            "score_maturidade_ia": 52,
+            "score_wrapper_risco": 0,
+            "evidencias": [{"fonte_url": "local://test", "trecho_resumido": "nvidia"}],
+        },
+    }
+    run_id = save_run(state, db_path)
+    run = get_run(run_id, db_path)
+
+    markdown_path = export_run(run, tmp_path, "markdown")
+    pdf_path = export_run(run, tmp_path, "pdf")
+    pdf_bytes = markdown_to_pdf_bytes(markdown_path.read_text(encoding="utf-8"))
+
+    assert markdown_path.read_text(encoding="utf-8").startswith("<!-- NVIDIA Startup AI Radar")
+    assert pdf_path.read_bytes().startswith(b"%PDF")
+    assert pdf_bytes.startswith(b"%PDF")

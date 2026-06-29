@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from nvidia_startup_ai_radar.exporting import briefing_markdown, markdown_to_pdf_bytes, slugify
 from nvidia_startup_ai_radar.pipeline import run_radar
 from nvidia_startup_ai_radar.storage import (
     DEFAULT_DB_PATH,
@@ -149,6 +150,23 @@ def main() -> None:
         header_cols[3].metric("Risco wrapper", f"{run['score_wrapper_risco']:.0f}/100")
 
         briefing = run.get("briefing_en") or run.get("briefing_pt") or ""
+        markdown_export = briefing_markdown(run)
+        filename = f"run-{run['run_id']}-{slugify(run['nome'])}"
+        download_cols = st.columns([1, 1, 2])
+        download_cols[0].download_button(
+            "Markdown",
+            data=markdown_export,
+            file_name=f"{filename}.md",
+            mime="text/markdown",
+            use_container_width=True,
+        )
+        download_cols[1].download_button(
+            "PDF",
+            data=markdown_to_pdf_bytes(markdown_export, title=run["nome"]),
+            file_name=f"{filename}.pdf",
+            mime="application/pdf",
+            use_container_width=True,
+        )
         st.markdown(briefing)
 
         recommendations = profile.get("recomendacoes_nvidia", [])

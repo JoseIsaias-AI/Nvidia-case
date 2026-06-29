@@ -52,6 +52,13 @@ Liste execucoes persistidas:
 nvidia-radar --list-runs
 ```
 
+Exporte um briefing salvo para PDF ou Markdown:
+
+```powershell
+nvidia-radar --export-run 1 --export-format pdf
+nvidia-radar --export-run 1 --export-format markdown
+```
+
 Abra o dashboard local:
 
 ```powershell
@@ -101,6 +108,7 @@ src/nvidia_startup_ai_radar/
   schemas.py         # StartupProfile, evidencias, recomendacoes e estado
   knowledge_base.py  # seed de tecnologias NVIDIA e case bank
   storage.py         # persistencia SQLite local de perfis e briefings
+  exporting.py       # exportacao de briefings em Markdown e PDF
   pipeline.py        # runner compartilhado por CLI e dashboard
   dashboard.py       # interface Streamlit para rodar e explorar analises
   scraping.py        # fetch publico MVP
@@ -113,4 +121,4 @@ src/nvidia_startup_ai_radar/
 - Migrar a persistencia SQLite de `StartupProfile` para Postgres.
 - Migrar `KNOWLEDGE_ENTRIES` e `HISTORICAL_CASES` para Qdrant + BM25.
 - Adicionar Playwright/Firecrawl como fallback do `scraper`.
-- Adicionar exportacao de briefing em PDF/slide a partir do dashboard.
+- Adicionar fila de revisao humana para aprovar briefings sinalizados.

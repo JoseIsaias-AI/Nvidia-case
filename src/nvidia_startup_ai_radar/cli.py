@@ -7,8 +7,9 @@ import json
 from pathlib import Path
 from typing import Any
 
+from nvidia_startup_ai_radar.exporting import DEFAULT_EXPORT_DIR, export_run
 from nvidia_startup_ai_radar.pipeline import run_radar
-from nvidia_startup_ai_radar.storage import DEFAULT_DB_PATH, list_recent_runs, save_run
+from nvidia_startup_ai_radar.storage import DEFAULT_DB_PATH, get_run, list_recent_runs, save_run
 
 
 def _load_inbound(path: str | None) -> dict[str, Any] | None:
@@ -55,7 +56,27 @@ def main() -> None:
         action="store_true",
         help="Only show persisted runs that require human review.",
     )
+    parser.add_argument("--export-run", type=int, help="Export a persisted run by run_id and exit.")
+    parser.add_argument(
+        "--export-format",
+        choices=["markdown", "pdf"],
+        default="pdf",
+        help="Format used with --export-run.",
+    )
+    parser.add_argument(
+        "--export-dir",
+        default=str(DEFAULT_EXPORT_DIR),
+        help="Directory used with --export-run.",
+    )
     args = parser.parse_args()
+
+    if args.export_run:
+        run = get_run(args.export_run, args.profile_db)
+        if run is None:
+            parser.error(f"Run {args.export_run} not found in {args.profile_db}.")
+        path = export_run(run, args.export_dir, args.export_format)
+        print(str(path))
+        return
 
     if args.list_runs:
         print(
