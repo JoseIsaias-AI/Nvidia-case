@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-riva",
+  "title": "NVIDIA Riva",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:43.673312+00:00",
+  "text": "# Riva\n\n- Fully Customizable\n- Flexibility at every step, from modifying model architectures to fine-tuning models on your data and customizing pipelines, as well as the ability to deploy on any platform. \n- State of the Art Models\n- Built on a decade of AI innovations by NVIDIA across hardware, model architectures, training techniques, inference optimizations, and deployment solutions. \n- Real-time Performance Optimizations\n- Continued optimizations across the entire stack from models to software to hardware delivered 12X the gain versus the previous generation. \n- Flexible and Scalable Deployments\n- Supports scaling to hundreds of thousands of concurrent users in the cloud, on premises, and at the edge. \n- Data Ownership and Privacy\n- Data processed on-premesis or your cloud. \n\nSee also\n\nGet started Now!\n\n# Riva#\n\nNVIDIA Riva Skills 2.26.0 is a toolkit for production-grade conversational AI inference.\n\nThe Riva Speech server exposes a simple API for performing speech recognition, speech synthesis, and a variety of natural language processing inferences.\n\n**Highlights**\n\n- State-of-the-art pretrained models available from NGC \n- Fully custom trained models with NVIDIA NeMo \n- Helm-managed cloud deployment \n- Streaming and batch speech recognition \n- Streaming and batch speech synthesis \n- NLP punctuation and capitalization models",
+  "text_sha256": "2e2b006ee2895c646c52f83978042bb10bee69c67e5cbbb5939b3a474cd44359",
+  "metadata": {
+    "tecnologia": "NVIDIA Riva",
+    "categoria": "Speech AI",
+    "problema_que_resolve": "Construir aplicacoes Speech AI aceleradas por GPU.",
+    "descricao_negocio": "Habilita automacao de atendimento e produtos de voz em tempo real.",
+    "descricao_tecnica": "# Riva\n\n- Fully Customizable\n- Flexibility at every step, from modifying model architectures to fine-tuning models on your data and customizing pipelines, as well as the ability to deploy on any platform. \n- State of the Art Models\n- Built on a decade of AI innovations by NVIDIA across hardware, model architectures, training techniques, inference optimizations, and deployment solutions. \n- Real-time Performance Optimizations\n- Continued optimizations across the entire stack from models to software to hardware delivered 12X the gain versus the previous generation. \n- Flexible and Scalable Deployments\n- Supports scaling to hundreds of thousands of concurrent users in the cloud, on premises, and at the edge. \n- Data Ownership and Privacy\n- Data processed on-premesis or your cloud. \n\nSee also\n\nGet started Now!\n\n# Riva#\n\nNVIDIA Riva Skills 2.26.0 is a toolkit for production-grade conversation",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "voz",
+      "asr",
+      "tts",
+      "transcricao",
+      "call center"
+    ],
+    "casos_de_uso_tipicos": [
+      "contact center",
+      "assistentes de voz",
+      "transcricao"
+    ],
+    "fonte_url": "https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html",
+    "source_url": "https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:43.673312+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

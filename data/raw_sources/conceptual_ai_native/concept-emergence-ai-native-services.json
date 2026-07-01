@@ -1,0 +1,37 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "concept-emergence-ai-native-services",
+  "title": "Emergence - AI-Native Services",
+  "collection": "conceptual_ai_native",
+  "document_type": "conceptual_source",
+  "source_url": "https://www.emcap.com/ai-native-services",
+  "domain": "www.emcap.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:54.494803+00:00",
+  "text": "# AI-Native Services: The Definitive Guide\n\nFrameworks, data, and hard-won lessons from the companies defining AI-native services\n\n## What Founders Say\n\n## The AI-Native Services Playbook\n\nOperational frameworks and hard-won lessons from the founders defining AI-native services - updated every six months.\n\nGo to Playbook\n\n01\n\nTeam\n\nDomain Expertise is Not Optional\n\n02\n\nProduct-Market Fit\n\nBeware Mirage PMF\n\n03\n\nDelivery\n\nSleep at Your Customer’s Office\n\n04\n\nProduct Roadmap\n\nNavigate the Important vs Urgent Tradeoff\n\n05\n\nGo-to-Market\n\nIt’s the Demo, Stupid\n\n06\n\nPricing\n\nOutcomes-based\n\n07\n\nDefensibility\n\nForge a Data Flywheel\n\n08\n\nMetrics\n\nTrack Productization Maniacally\n\n09\n\nM&A\n\nBeware of Acquiring Too Early\n\n## Our AI-Native Services Portfolio\n\n## AI-Native Services Market Map\n\nSubmit a Company\n\n## More Perspectives on Building an AI-Native Service\n\nExplore more Content\n\nShould Your SaaS Company Become a Services Business?\n\nMay 05, 2026\n\nRoll Up or Build? Why the Fastest Path to a Venture-Scale AINS Business Is the One Founders Keep Avoiding\n\nJune 2, 2026\n\nThe End of Human Duct Tape: Why We Led Hanover Park’s Series A\n\nMar 18, 2026\n\nHarper: Building the AI-Native Insurance Brokerage Every Business Deserves\n\nFeb 25, 2026\n\nProsper AI: Turning Hold Music into Healthcare Access\n\nSep 23, 2025",
+  "text_sha256": "ba96021a17b7e3cadb58295b58c93e3acbf39b022a4f96b8796256273e55c2e5",
+  "metadata": {
+    "tecnologia": "AI-native services",
+    "categoria": "AI-native vs wrapper",
+    "problema_que_resolve": "Separar empresas que vendem resultado operacional de ferramentas rasas.",
+    "descricao_negocio": "Apoia o score de maturidade para startups B2B que automatizam trabalho real.",
+    "descricao_tecnica": "# AI-Native Services: The Definitive Guide\n\nFrameworks, data, and hard-won lessons from the companies defining AI-native services\n\n## What Founders Say\n\n## The AI-Native Services Playbook\n\nOperational frameworks and hard-won lessons from the founders defining AI-native services - updated every six months.\n\nGo to Playbook\n\n01\n\nTeam\n\nDomain Expertise is Not Optional\n\n02\n\nProduct-Market Fit\n\nBeware Mirage PMF\n\n03\n\nDelivery\n\nSleep at Your Customer’s Office\n\n04\n\nProduct Roadmap\n\nNavigate the Important vs Urgent Tradeoff\n\n05\n\nGo-to-Market\n\nIt’s the Demo, Stupid\n\n06\n\nPricing\n\nOutcomes-based\n\n07\n\nDefensibility\n\nForge a Data Flywheel\n\n08\n\nMetrics\n\nTrack Productization Maniacally\n\n09\n\nM&A\n\nBeware of Acquiring Too Early\n\n## Our AI-Native Services Portfolio\n\n## AI-Native Services Market Map\n\nSubmit a Company\n\n## More Perspectives on Building an AI-Native Service\n\nExplore more Content\n\nShould Your Sa",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "servicos ai-native",
+      "workflow",
+      "outcome-based",
+      "data flywheel"
+    ],
+    "casos_de_uso_tipicos": [
+      "B2B software",
+      "servicos automatizados",
+      "operacoes"
+    ],
+    "fonte_url": "https://www.emcap.com/ai-native-services",
+    "source_url": "https://www.emcap.com/ai-native-services",
+    "data_ultima_verificacao": "2026-07-01T03:00:54.494803+00:00",
+    "document_priority": 1.0,
+    "collection": "conceptual_ai_native"
+  }
+}

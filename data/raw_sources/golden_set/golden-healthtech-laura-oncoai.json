@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "golden-healthtech-laura-oncoai",
+  "title": "Golden set - Laura e OncoAI",
+  "collection": "golden_set",
+  "document_type": "golden_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.457280+00:00",
+  "text": "# Golden set - Laura e OncoAI\n\nPergunta: healthtech com IA clinica, dados sensiveis, prontuario, oncologia ou risco regulatorio precisa de quais tecnologias NVIDIA?\n\nFontes esperadas no top-5: NVIDIA Clara para saude/imagem/life sciences, NeMo Guardrails para governanca e LGPD, casos Laura e Cydoc como comparaveis.",
+  "text_sha256": "044c1e8767073f34c023d6765c54c72db2dbb378a62145700596da223a6f54b3",
+  "metadata": {
+    "tecnologia": "NVIDIA Clara / NeMo Guardrails",
+    "categoria": "Healthtech regulada",
+    "problema_que_resolve": "Healthtechs com dados clinicos precisam de governanca e stack especializada.",
+    "descricao_negocio": "Deve recuperar Clara, NeMo Guardrails e casos de sucesso/fracasso em saude.",
+    "descricao_tecnica": "# Golden set - Laura e OncoAI\n\nPergunta: healthtech com IA clinica, dados sensiveis, prontuario, oncologia ou risco regulatorio precisa de quais tecnologias NVIDIA?\n\nFontes esperadas no top-5: NVIDIA Clara para saude/imagem/life sciences, NeMo Guardrails para governanca e LGPD, casos Laura e Cydoc como comparaveis.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "healthtech",
+      "clinico",
+      "prontuario",
+      "anvisa",
+      "lgpd",
+      "oncologia"
+    ],
+    "casos_de_uso_tipicos": [
+      "imagem medica",
+      "monitoramento clinico",
+      "governanca"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.457280+00:00",
+    "document_priority": 1.0,
+    "collection": "golden_set"
+  }
+}

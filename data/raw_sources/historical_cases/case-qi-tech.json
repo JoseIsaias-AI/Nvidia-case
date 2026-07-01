@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-qi-tech",
+  "title": "QI Tech",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.351304+00:00",
+  "text": "# QI Tech\n\n## Tipo\nsucesso\n\n## Setor\nFintech\n\n## Caracteristicas\ndata_moat, setor_regulado\n\n## O que aconteceu\nIA para credito e automacao financeira.\n\n## Licao estruturada\nIA no nucleo da decisao de negocio tem maior defensibilidade.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "08ad18298045eca6cc1c5f4d2d2e96e97f033dfb6ffdd7832a7fff6a129dc0e4",
+  "metadata": {
+    "tecnologia": "QI Tech",
+    "categoria": "Fintech",
+    "problema_que_resolve": "IA para credito e automacao financeira.",
+    "descricao_negocio": "IA no nucleo da decisao de negocio tem maior defensibilidade.",
+    "descricao_tecnica": "# QI Tech\n\n## Tipo\nsucesso\n\n## Setor\nFintech\n\n## Caracteristicas\ndata_moat, setor_regulado\n\n## O que aconteceu\nIA para credito e automacao financeira.\n\n## Licao estruturada\nIA no nucleo da decisao de negocio tem maior defensibilidade.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Fintech",
+      "sucesso",
+      "data moat",
+      "",
+      "",
+      "setor regulado"
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.351304+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

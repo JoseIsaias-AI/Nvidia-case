@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-jasper-ai",
+  "title": "Jasper AI",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.409818+00:00",
+  "text": "# Jasper AI\n\n## Tipo\nalerta\n\n## Setor\nConteudo/Marketing\n\n## Caracteristicas\ndependencia_api_externa\n\n## O que aconteceu\nQueda de valuation com avanco nativo do ChatGPT.\n\n## Licao estruturada\nCrescimento sem moat e vulneravel a melhoria dos labs.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "6b1e09f7aa699d0b4a51f8b35f9567466d4177803075cd0b08d943e68dd51f44",
+  "metadata": {
+    "tecnologia": "Jasper AI",
+    "categoria": "Conteudo/Marketing",
+    "problema_que_resolve": "Queda de valuation com avanco nativo do ChatGPT.",
+    "descricao_negocio": "Crescimento sem moat e vulneravel a melhoria dos labs.",
+    "descricao_tecnica": "# Jasper AI\n\n## Tipo\nalerta\n\n## Setor\nConteudo/Marketing\n\n## Caracteristicas\ndependencia_api_externa\n\n## O que aconteceu\nQueda de valuation com avanco nativo do ChatGPT.\n\n## Licao estruturada\nCrescimento sem moat e vulneravel a melhoria dos labs.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Conteudo/Marketing",
+      "alerta",
+      "",
+      "",
+      "api externa",
+      ""
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.409818+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

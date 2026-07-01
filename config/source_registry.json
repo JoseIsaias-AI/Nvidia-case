@@ -1,0 +1,47 @@
+[
+  {
+    "id": "official_startup_site",
+    "label": "Site oficial da startup",
+    "category": "fonte primaria",
+    "trust_score": 0.92,
+    "allowed_use": "coleta de evidencias publicas, produto, clientes, carreiras e blog",
+    "collection_method": "requests, trafilatura, Playwright quando necessario",
+    "review_note": "Priorizar como fonte para claims sobre produto, clientes e stack."
+  },
+  {
+    "id": "official_nvidia_docs",
+    "label": "Documentacao oficial NVIDIA",
+    "category": "fonte primaria",
+    "trust_score": 0.98,
+    "allowed_use": "base de conhecimento para recomendacoes tecnicas",
+    "collection_method": "ingestao curada e verificacao periodica",
+    "review_note": "Usar como evidencia principal para capacidades de tecnologia NVIDIA."
+  },
+  {
+    "id": "startup_directories",
+    "label": "Diretorios e ecossistemas de startups",
+    "category": "fonte secundaria",
+    "trust_score": 0.74,
+    "allowed_use": "descoberta outbound, setor, funding e sinais publicos",
+    "collection_method": "busca publica e scraping respeitando robots.txt",
+    "review_note": "Validar claims importantes contra site oficial ou noticia confiavel."
+  },
+  {
+    "id": "trusted_news",
+    "label": "Noticias de negocios e tecnologia",
+    "category": "fonte secundaria",
+    "trust_score": 0.8,
+    "allowed_use": "validacao de funding, clientes, mercado e tracao",
+    "collection_method": "busca publica, cache e extracao de texto",
+    "review_note": "Citar fonte e data quando usar para recomendacao executiva."
+  },
+  {
+    "id": "job_posts",
+    "label": "Vagas e carreiras",
+    "category": "sinal tecnico",
+    "trust_score": 0.7,
+    "allowed_use": "inferir stack tecnica e maturidade operacional",
+    "collection_method": "coleta publica quando permitido",
+    "review_note": "Nao tratar uma vaga isolada como prova definitiva de stack."
+  }
+]

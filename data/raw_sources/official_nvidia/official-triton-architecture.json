@@ -1,0 +1,37 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-triton-architecture",
+  "title": "Triton Inference Server",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/architecture.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:42.380365+00:00",
+  "text": "# Triton Architecture#\n\nThe following figure shows the Triton Inference Server high-level architecture. The model repository is a file-system based repository of the models that Triton will make available for inferencing. Inference requests arrive at the server via either HTTP/REST or GRPC or by the C API and are then routed to the appropriate per-model scheduler. Triton implements multiple scheduling and batching algorithms that can be configured on a model-by-model basis. Each modelâs scheduler optionally performs batching of inference requests and then passes the requests to the backend corresponding to the model type. The backend performs inferencing using the inputs provided in the batched requests to produce the requested outputs. The outputs are then returned.\n\nTriton supports a backend C API that allows Triton to be extended with new functionality such as custom pre- and post-processing operations or even a new deep-learning framework.\n\nThe models being served by Triton can be queried and controlled by a dedicated model management API that is available by HTTP/REST or GRPC protocol, or by the C API.\n\nReadiness and liveness health endpoints and utilization, throughput and latency metrics ease the integration of Triton into deployment framework such as Kubernetes.",
+  "text_sha256": "4b211c5e45c525ad5a917fd393091a236c2ebbf052a56f928c000cb41f641e60",
+  "metadata": {
+    "tecnologia": "Triton Inference Server",
+    "categoria": "Inference serving",
+    "problema_que_resolve": "Arquitetura de serving com repositorio de modelos, HTTP/gRPC e schedulers.",
+    "descricao_negocio": "Base tecnica para discutir producao, throughput e operacao de modelos.",
+    "descricao_tecnica": "# Triton Architecture#\n\nThe following figure shows the Triton Inference Server high-level architecture. The model repository is a file-system based repository of the models that Triton will make available for inferencing. Inference requests arrive at the server via either HTTP/REST or GRPC or by the C API and are then routed to the appropriate per-model scheduler. Triton implements multiple scheduling and batching algorithms that can be configured on a model-by-model basis. Each modelâs scheduler optionally performs batching of inference requests and then passes the requests to the backend corresponding to the model type. The backend performs inferencing using the inputs provided in the batched requests to produce the requested outputs. The outputs are then returned.\n\nTriton supports a backend C API that allows Triton to be extended with new functionality such as custom pre- and post-pro",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "batching",
+      "scheduler",
+      "model repository",
+      "grpc",
+      "http"
+    ],
+    "casos_de_uso_tipicos": [
+      "deploy de modelos",
+      "serving multi-backend"
+    ],
+    "fonte_url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/architecture.html",
+    "source_url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/architecture.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:42.380365+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

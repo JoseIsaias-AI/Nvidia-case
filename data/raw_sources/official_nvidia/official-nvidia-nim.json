@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-nvidia-nim",
+  "title": "NVIDIA NIM",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/nim/index.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:39.769621+00:00",
+  "text": "## NVIDIA NIM\n\nPart of NVIDIA AI Enterprise, NVIDIA NIM microservices are a set of easy-to-use microservices for accelerating the deployment of foundation models on any cloud or data center and helps keep your data secure. NIM microservices have production-grade runtimes including on-going security updates.\n\n        \n        Getting Started\n        \n    \n\n        \n    \n    \n        \n        Troubleshooting\n        \n    \n\n        \n    \n    \n        \n        Related Resources",
+  "text_sha256": "eee8e169f5f829c50a31fb8c5482d9c2ee7a33683e606d8df2f413d1b6d97b9e",
+  "metadata": {
+    "tecnologia": "NVIDIA NIM",
+    "categoria": "LLM serving",
+    "problema_que_resolve": "Deploy otimizado de modelos como microservicos de inferencia.",
+    "descricao_negocio": "Ajuda startups a reduzir dependencia de APIs externas e levar IA para producao.",
+    "descricao_tecnica": "## NVIDIA NIM\n\nPart of NVIDIA AI Enterprise, NVIDIA NIM microservices are a set of easy-to-use microservices for accelerating the deployment of foundation models on any cloud or data center and helps keep your data secure. NIM microservices have production-grade runtimes including on-going security updates.\n\n        \n        Getting Started\n        \n    \n\n        \n    \n    \n        \n        Troubleshooting\n        \n    \n\n        \n    \n    \n        \n        Related Resources",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "llm",
+      "api",
+      "self-hosted",
+      "latencia",
+      "custo",
+      "deploy"
+    ],
+    "casos_de_uso_tipicos": [
+      "agentes",
+      "copilots",
+      "inferencia LLM"
+    ],
+    "fonte_url": "https://docs.nvidia.com/nim/index.html",
+    "source_url": "https://docs.nvidia.com/nim/index.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:39.769621+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

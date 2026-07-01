@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-builder-ai",
+  "title": "Builder.ai",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.424785+00:00",
+  "text": "# Builder.ai\n\n## Tipo\nalerta\n\n## Setor\nDev tools/no-code\n\n## Caracteristicas\nSem caracteristica booleana marcada.\n\n## O que aconteceu\nCaso reportado de IA operada majoritariamente por humanos.\n\n## Licao estruturada\nIA sem evidencia tecnica verificavel e risco reputacional.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "c09154440e65fc2a043424d43fd3ec821214151e311c1c1945805156d8a89fc5",
+  "metadata": {
+    "tecnologia": "Builder.ai",
+    "categoria": "Dev tools/no-code",
+    "problema_que_resolve": "Caso reportado de IA operada majoritariamente por humanos.",
+    "descricao_negocio": "IA sem evidencia tecnica verificavel e risco reputacional.",
+    "descricao_tecnica": "# Builder.ai\n\n## Tipo\nalerta\n\n## Setor\nDev tools/no-code\n\n## Caracteristicas\nSem caracteristica booleana marcada.\n\n## O que aconteceu\nCaso reportado de IA operada majoritariamente por humanos.\n\n## Licao estruturada\nIA sem evidencia tecnica verificavel e risco reputacional.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Dev tools/no-code",
+      "alerta",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.424785+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

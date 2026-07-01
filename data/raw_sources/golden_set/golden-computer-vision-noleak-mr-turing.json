@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "golden-computer-vision-noleak-mr-turing",
+  "title": "Golden set - Noleak e Mr. Turing",
+  "collection": "golden_set",
+  "document_type": "golden_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.468957+00:00",
+  "text": "# Golden set - Noleak e Mr. Turing\n\nPergunta: startup de visao computacional em cameras, edge AI ou seguranca com GPU deve apontar para qual stack NVIDIA?\n\nFontes esperadas no top-5: Triton Inference Server para serving, TensorRT/TensorRT-LLM para otimizacao, Noleak como case historico e NVIDIA Inception.",
+  "text_sha256": "3428877c5aa66bd63ce9b6345a576e11e31d2f8c5d36e0710bc19cd27b5bcf93",
+  "metadata": {
+    "tecnologia": "Triton Inference Server / TensorRT-LLM",
+    "categoria": "Computer vision e edge AI",
+    "problema_que_resolve": "Startups com inferencia de visao em producao precisam de serving e otimizacao.",
+    "descricao_negocio": "Deve recuperar Triton, TensorRT/TensorRT-LLM e Inception.",
+    "descricao_tecnica": "# Golden set - Noleak e Mr. Turing\n\nPergunta: startup de visao computacional em cameras, edge AI ou seguranca com GPU deve apontar para qual stack NVIDIA?\n\nFontes esperadas no top-5: Triton Inference Server para serving, TensorRT/TensorRT-LLM para otimizacao, Noleak como case historico e NVIDIA Inception.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "computer vision",
+      "visao computacional",
+      "camera",
+      "gpu",
+      "triton",
+      "tensorrt"
+    ],
+    "casos_de_uso_tipicos": [
+      "video analytics",
+      "edge AI",
+      "inferencia GPU"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.468957+00:00",
+    "document_priority": 1.0,
+    "collection": "golden_set"
+  }
+}

@@ -74,6 +74,7 @@ class StartupProfile(BaseModel):
     sinais_wrapper_risco: list[SignalEvidence] = Field(default_factory=list)
     stack_tecnica_detectada: list[str] = Field(default_factory=list)
     stack_concorrente_detectada: list[str] = Field(default_factory=list)
+    stack_concorrente_evidencias: list[SignalEvidence] = Field(default_factory=list)
     score_maturidade_ia: float = 0.0
     score_componentes: list[ScoreComponent] = Field(default_factory=list)
     score_wrapper_risco: float = 0.0
@@ -93,6 +94,12 @@ class RawPage(BaseModel):
     title: str | None = None
     text: str
     collected_at: str = Field(default_factory=utc_now_iso)
+    scrape_method: str = "local"
+    scrape_success: bool = True
+    served_from_cache: bool = False
+    failure_reason: str | None = None
+    robots_allowed: bool | None = None
+    cache_key: str | None = None
 
 
 class KnowledgeEntry(BaseModel):
@@ -120,7 +127,7 @@ class HistoricalCase(BaseModel):
     setor_regulado: bool = False
     resumo_o_que_aconteceu: str
     licao_estruturada: str
-    fonte_url: str = "docs/plano-nvidia-startup-ai-radar.md"
+    fonte_url: str = "docs/guia-completo-do-case.md"
 
 
 class JudgeResult(BaseModel):
@@ -131,17 +138,31 @@ class JudgeResult(BaseModel):
 
 
 class AgentState(TypedDict, total=False):
+    execution_id: str
     run_mode: Literal["outbound", "inbound"]
     query: str
     output_language: Literal["pt", "en", "both"]
     inbound_profile: dict[str, Any]
+    discover_candidates: bool
+    discovery_limit: int
+    discovery_results_per_query: int
+    discovery_fetch_pages: bool
+    discovery_delay_seconds: float
+    discovery_search_workers: int
     planned_searches: list[str]
     urls: list[str]
+    candidate_leads: list[dict[str, Any]]
     raw_pages: list[dict[str, Any]]
     profile: dict[str, Any]
     retrieved_entries: list[dict[str, Any]]
+    rag_db_path: str
     judge: dict[str, Any]
     briefing_pt: str
     briefing_en: str
     human_review_required: bool
+    agent_execution_modes: dict[str, str]
+    agent_execution_log: list[dict[str, Any]]
+    agent_traces: list[dict[str, Any]]
+    llm_provider_unavailable: bool
+    llm_provider_unavailable_reason: str
     errors: list[str]

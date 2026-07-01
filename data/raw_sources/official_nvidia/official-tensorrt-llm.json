@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-tensorrt-llm",
+  "title": "TensorRT-LLM",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/tensorrt-llm/index.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:42.872487+00:00",
+  "text": "NVIDIA TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and build NVIDIA TensorRT engines that contain state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT-LLM also contains components to create Python and C++ runtimes that execute those TensorRT engines.\n\n        This is the starting point to try out TensorRT-LLM. Specifically, this Quick Start Guide enables you to quickly get setup and send HTTP requests using TensorRT-LLM.\n    \n\n    \n        This document provides step-by-step instructions on how to install TensorRT-LLM on Linux.\n    \n\n    \n        This document provides instructions for building TensorRT-LLM from the source code on Linux.\n    \n\n    \n        Clone the latest TensorRT-LLM branch, work with the code, participate in the development of the product, pull in latest changes, and view latest discussions. \n    \n\n    \n        This document provides an overview about TensorRT-LLM and how it accelerates and optimizes inference performance for the latest large language models (LLMs) on NVIDIA GPUs. Discover the major benefits that TensorRT-LLM provides and how it can help you.\n    \n\n    \n        This document provides the current status, software versions, fixed bugs, and known issues for TensorRT-LLM. All published functionality in the Release Notes has been fully tested and verified with known limitations documented.\n\n    \n\n    \n        This document lists the supported GPUs, models, and other hardware and software versions for the latest NVIDIA TensorRT-LLM release.\n    \n\n    \n        This document explains how TensorRT-LLM as toolkit, assembles optimized solutions to perform Large Language Model (LLM) inference.\n    \n\n    \n        This is the C++ API Runtime documentation for the TensorRT-LLM library.\n    \n\n    \n        This is the Python API Runtime documentation for the TensorRT-LLM library.\n    \n\n    \n        This is the Python API Layers documentation for the TensorRT-LLM library.\n    \n\n    \n        This is the Python API Functionals documentation for the TensorRT-LLM library.\n    \n\n    \n        This is the Python API Models documentation for the TensorRT-LLM library.\n    \n\n    \n        This is the Python API Plugin documentation for the TensorRT-LLM library.\n    \n\n    \n        This is the Python API Quantization documentation for the TensorRT-LLM library.\n    \n\n    \n        Learn how we used NVIDIA’s suite of solutions for optimizing LLM models and deploying in multi-GPU environments.\n    \n\n    \n        Learn about accelerated LLM model alignment using the NeMo Framework and inference optimization and deployment through NVIDIA's TensorRT-LLM and Triton Inference Server.\n    \n\n    \n        Learn how we are leveraging TensorRT-LLM to implement key features of our model-serving product and highlight useful features of TensorRT-LLM such as streaming of tokens, in-flight batching, paged-attention, quantization, and more.\n    \n\n    \n        Find more news and tutorials.\n    \n\n    \n        Join the NVIDIA Developer Program.\n    \n\n    \n        Explore TensorRT-LLM forums.\n    \n\n    \n        This document describes how to debug unit tests, execution errors, E2E models, and installation issues.",
+  "text_sha256": "a84a68d34a6a3ca8a91a26e0b097ddb157ba35f3f6bddc5492d033ad5e5fdbc6",
+  "metadata": {
+    "tecnologia": "TensorRT-LLM",
+    "categoria": "LLM optimization",
+    "problema_que_resolve": "Otimizar inferencia de LLMs em GPUs NVIDIA.",
+    "descricao_negocio": "Pode melhorar economia unitaria em startups com volume de inferencia.",
+    "descricao_tecnica": "NVIDIA TensorRT-LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and build NVIDIA TensorRT engines that contain state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT-LLM also contains components to create Python and C++ runtimes that execute those TensorRT engines.\n\n        This is the starting point to try out TensorRT-LLM. Specifically, this Quick Start Guide enables you to quickly get setup and send HTTP requests using TensorRT-LLM.\n    \n\n    \n        This document provides step-by-step instructions on how to install TensorRT-LLM on Linux.\n    \n\n    \n        This document provides instructions for building TensorRT-LLM from the source code on Linux.\n    \n\n    \n        Clone the latest TensorRT-LLM branch, work with the code, participate in the development of the product, pull in latest changes, and view latest ",
+    "complexidade_implementacao": "alta",
+    "sinais_de_gatilho": [
+      "llm",
+      "latencia",
+      "throughput",
+      "gpu",
+      "otimizacao"
+    ],
+    "casos_de_uso_tipicos": [
+      "LLM em escala",
+      "inferencia eficiente",
+      "batching"
+    ],
+    "fonte_url": "https://docs.nvidia.com/tensorrt-llm/index.html",
+    "source_url": "https://docs.nvidia.com/tensorrt-llm/index.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:42.872487+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

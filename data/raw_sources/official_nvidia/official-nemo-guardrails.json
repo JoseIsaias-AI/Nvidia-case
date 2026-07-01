@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-nemo-guardrails",
+  "title": "NeMo Guardrails",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/nemo/guardrails/latest/about/rail-types.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:41.647574+00:00",
+  "text": "# Guardrail Types\n\nThe NeMo Guardrails library applies guardrails at multiple stages of the LLM interaction. Input rails apply guardrails before the LLM is called by validating and sanitizing user inputs. Retrieval rails filter and validate retrieved knowledge (documents and chunks) to ensure only trusted context is provided to the LLM. Dialog rails steer and constrain the multi‑turn conversation, enforcing flow logic and policies across turns. Execution rails control and validate tool/function calls, their arguments, and results to safely interact with external systems. Output rails evaluate and post‑process model responses, filtering, editing, or blocking unsafe or off‑policy content before it reaches users.\n\nInput and Output rails are the most common.\n\n\n## Use Cases and Applicable Rails\n\nThe following table summarizes which rail types apply to each use case.",
+  "text_sha256": "b2076de358e7253848b51a2e5ea87ae1847b83ca8b15b479941dca6975b30160",
+  "metadata": {
+    "tecnologia": "NeMo Guardrails",
+    "categoria": "AI governance",
+    "problema_que_resolve": "Aplicar rails de seguranca, topico, dialogo e retrieval em sistemas LLM.",
+    "descricao_negocio": "Ajuda a vender IA com mais controle, confianca e aderencia regulatoria.",
+    "descricao_tecnica": "# Guardrail Types\n\nThe NeMo Guardrails library applies guardrails at multiple stages of the LLM interaction. Input rails apply guardrails before the LLM is called by validating and sanitizing user inputs. Retrieval rails filter and validate retrieved knowledge (documents and chunks) to ensure only trusted context is provided to the LLM. Dialog rails steer and constrain the multi‑turn conversation, enforcing flow logic and policies across turns. Execution rails control and validate tool/function calls, their arguments, and results to safely interact with external systems. Output rails evaluate and post‑process model responses, filtering, editing, or blocking unsafe or off‑policy content before it reaches users.\n\nInput and Output rails are the most common.\n\n\n## Use Cases and Applicable Rails\n\nThe following table summarizes which rail types apply to each use case.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "guardrails",
+      "compliance",
+      "governanca",
+      "seguranca",
+      "rag"
+    ],
+    "casos_de_uso_tipicos": [
+      "agentes seguros",
+      "RAG confiavel",
+      "setores regulados"
+    ],
+    "fonte_url": "https://docs.nvidia.com/nemo/guardrails/latest/about/rail-types.html",
+    "source_url": "https://docs.nvidia.com/nemo/guardrails/latest/about/rail-types.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:41.647574+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

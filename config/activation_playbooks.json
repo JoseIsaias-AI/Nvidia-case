@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cost_latency_inference",
+    "title": "Benchmark de custo e latencia de inferencia",
+    "trigger_signals": ["GPU", "Triton", "TensorRT", "LLM", "inferencia", "latencia", "custo"],
+    "recommended_technologies": ["NVIDIA NIM", "Triton Inference Server", "TensorRT-LLM", "NVIDIA GenAI-Perf"],
+    "next_action": "Agendar conversa tecnica para medir baseline atual e comparar throughput, latencia e custo por requisicao.",
+    "evidence_required": ["volume de inferencia", "stack atual", "metrica de latencia ou custo"]
+  },
+  {
+    "id": "governance_guardrails",
+    "title": "Governanca para assistentes e automacoes",
+    "trigger_signals": ["guardrails", "compliance", "LGPD", "risco", "atendimento", "copilot"],
+    "recommended_technologies": ["NeMo Guardrails", "NVIDIA AI Enterprise", "NVIDIA NIM"],
+    "next_action": "Validar casos de risco e propor prova curta com guardrails, logs e avaliacao de respostas.",
+    "evidence_required": ["uso de IA conversacional", "risco regulatorio", "politicas de resposta"]
+  },
+  {
+    "id": "data_pipeline_acceleration",
+    "title": "Aceleracao de dados e modelos tabulares",
+    "trigger_signals": ["dados tabulares", "fraude", "credito", "ranking", "analytics", "ETL"],
+    "recommended_technologies": ["NVIDIA RAPIDS", "cuDF", "cuML", "CUDA"],
+    "next_action": "Mapear gargalos de processamento e selecionar um pipeline candidato para benchmark com RAPIDS.",
+    "evidence_required": ["volume de dados", "processo atual", "tempo de processamento"]
+  },
+  {
+    "id": "healthcare_compliance",
+    "title": "IA para saude com controle e validacao",
+    "trigger_signals": ["healthtech", "saude", "clinico", "oncologia", "prontuario", "ANVISA"],
+    "recommended_technologies": ["NVIDIA Clara", "MONAI", "NeMo Guardrails", "NVIDIA AI Enterprise"],
+    "next_action": "Separar caso clinico, dados disponiveis e restricoes de compliance antes de qualquer prova tecnica.",
+    "evidence_required": ["setor de saude", "caso clinico", "restricao regulatoria"]
+  },
+  {
+    "id": "startup_ecosystem",
+    "title": "Ativacao de relacionamento NVIDIA Inception",
+    "trigger_signals": ["startup", "funding", "P&D", "GPU", "AI-native", "go-to-market"],
+    "recommended_technologies": ["NVIDIA Inception"],
+    "next_action": "Convidar para conversa de qualificacao Inception e mapear beneficio tecnico/comercial prioritario.",
+    "evidence_required": ["fit de startup", "sinal de IA", "proxima necessidade tecnica ou comercial"]
+  }
+]

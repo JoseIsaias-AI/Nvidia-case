@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "golden-devtools-codewhisper",
+  "title": "Golden set - CodeWhisper",
+  "collection": "golden_set",
+  "document_type": "golden_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.498646+00:00",
+  "text": "# Golden set - CodeWhisper\n\nPergunta: dev tool cuja feature principal pode ser copiada por um modelo/lab tem defensibilidade?\n\nFontes esperadas no top-5: CodeWhisper como fracasso, fontes wrapper/AI-native e NVIDIA NIM quando a tese envolver modelo self-hosted.",
+  "text_sha256": "7b9398eea69635e5465bb0d2db126cfba99ede7c1bb5a16255b583d04d47ad42",
+  "metadata": {
+    "tecnologia": "AI wrapper defensibility / NVIDIA NIM",
+    "categoria": "Dev tools",
+    "problema_que_resolve": "Dev tool que pode virar feature de provedor precisa provar workflow/dado proprio.",
+    "descricao_negocio": "Deve recuperar CodeWhisper, wrapper risk e caminho NIM/Triton se houver inferencia propria.",
+    "descricao_tecnica": "# Golden set - CodeWhisper\n\nPergunta: dev tool cuja feature principal pode ser copiada por um modelo/lab tem defensibilidade?\n\nFontes esperadas no top-5: CodeWhisper como fracasso, fontes wrapper/AI-native e NVIDIA NIM quando a tese envolver modelo self-hosted.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "dev tools",
+      "feature copiada",
+      "provider",
+      "api externa",
+      "copilot"
+    ],
+    "casos_de_uso_tipicos": [
+      "dev tools",
+      "avaliacao de moat",
+      "modelo proprietario"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.498646+00:00",
+    "document_priority": 1.0,
+    "collection": "golden_set"
+  }
+}

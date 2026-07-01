@@ -1,0 +1,318 @@
+{
+  "schema_version": "rag_ingestion_manifest_v1",
+  "collected_at": "2026-07-01T03:00:56.525668+00:00",
+  "source_count": 38,
+  "manual_count": 0,
+  "fetched_count": 38,
+  "failed_count": 0,
+  "blocked_count": 0,
+  "output_dir": "data\\raw_sources",
+  "fetched": [
+    {
+      "id": "official-nvidia-nim",
+      "title": "NVIDIA NIM",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/nim/index.html",
+      "chars": 478,
+      "path": "data\\raw_sources\\official_nvidia\\official-nvidia-nim.json"
+    },
+    {
+      "id": "official-nvidia-nim-llm",
+      "title": "NVIDIA NIM",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/nim/large-language-models/latest/about-nim-llm/overview.html",
+      "chars": 7550,
+      "path": "data\\raw_sources\\official_nvidia\\official-nvidia-nim-llm.json"
+    },
+    {
+      "id": "official-nemo-guardrails",
+      "title": "NeMo Guardrails",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/nemo/guardrails/latest/about/rail-types.html",
+      "chars": 873,
+      "path": "data\\raw_sources\\official_nvidia\\official-nemo-guardrails.json"
+    },
+    {
+      "id": "official-triton",
+      "title": "Triton Inference Server",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/index.html",
+      "chars": 3012,
+      "path": "data\\raw_sources\\official_nvidia\\official-triton.json"
+    },
+    {
+      "id": "official-triton-architecture",
+      "title": "Triton Inference Server",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/user_guide/architecture.html",
+      "chars": 1290,
+      "path": "data\\raw_sources\\official_nvidia\\official-triton-architecture.json"
+    },
+    {
+      "id": "official-tensorrt-llm",
+      "title": "TensorRT-LLM",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/tensorrt-llm/index.html",
+      "chars": 3242,
+      "path": "data\\raw_sources\\official_nvidia\\official-tensorrt-llm.json"
+    },
+    {
+      "id": "official-rapids",
+      "title": "RAPIDS",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/rapids/index.html",
+      "chars": 410,
+      "path": "data\\raw_sources\\official_nvidia\\official-rapids.json"
+    },
+    {
+      "id": "official-riva",
+      "title": "NVIDIA Riva",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/deeplearning/riva/user-guide/docs/index.html",
+      "chars": 1352,
+      "path": "data\\raw_sources\\official_nvidia\\official-riva.json"
+    },
+    {
+      "id": "official-riva-asr",
+      "title": "NVIDIA Riva",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/deeplearning/riva/user-guide/docs/asr/asr-overview.html",
+      "chars": 14203,
+      "path": "data\\raw_sources\\official_nvidia\\official-riva-asr.json"
+    },
+    {
+      "id": "official-clara",
+      "title": "NVIDIA Clara",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/clara/index.html",
+      "chars": 1675,
+      "path": "data\\raw_sources\\official_nvidia\\official-clara.json"
+    },
+    {
+      "id": "official-monai",
+      "title": "NVIDIA Clara",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/clara/monai/index.html",
+      "chars": 8273,
+      "path": "data\\raw_sources\\official_nvidia\\official-monai.json"
+    },
+    {
+      "id": "official-morpheus",
+      "title": "NVIDIA Morpheus",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/morpheus/index.html",
+      "chars": 2775,
+      "path": "data\\raw_sources\\official_nvidia\\official-morpheus.json"
+    },
+    {
+      "id": "official-ai-enterprise",
+      "title": "NVIDIA AI Enterprise",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/ai-enterprise/index.html",
+      "chars": 18230,
+      "path": "data\\raw_sources\\official_nvidia\\official-ai-enterprise.json"
+    },
+    {
+      "id": "official-inception",
+      "title": "NVIDIA Inception",
+      "status": "ingested",
+      "url": "https://www.nvidia.com/en-us/startups/",
+      "chars": 5617,
+      "path": "data\\raw_sources\\official_nvidia\\official-inception.json"
+    },
+    {
+      "id": "official-genai-perf",
+      "title": "NVIDIA GenAI-Perf",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/perf_analyzer/genai-perf/README.html",
+      "chars": 29256,
+      "path": "data\\raw_sources\\official_nvidia\\official-genai-perf.json"
+    },
+    {
+      "id": "official-llm-cost-blog",
+      "title": "NVIDIA GenAI-Perf",
+      "status": "ingested",
+      "url": "https://developer.nvidia.com/blog/llm-inference-benchmarking-how-much-does-your-llm-inference-cost/",
+      "chars": 11587,
+      "path": "data\\raw_sources\\official_nvidia\\official-llm-cost-blog.json"
+    },
+    {
+      "id": "official-nemo-framework",
+      "title": "NVIDIA NeMo Framework",
+      "status": "ingested",
+      "url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/index.html",
+      "chars": 4257,
+      "path": "data\\raw_sources\\official_nvidia\\official-nemo-framework.json"
+    },
+    {
+      "id": "concept-nvidia-ai-five-layer-cake",
+      "title": "AI Is a 5-Layer Cake",
+      "status": "ingested",
+      "url": "https://blogs.nvidia.com/blog/ai-5-layer-cake/",
+      "chars": 7033,
+      "path": "data\\raw_sources\\conceptual_ai_native\\concept-nvidia-ai-five-layer-cake.json"
+    },
+    {
+      "id": "concept-sequoia-generative-ai-act-o1",
+      "title": "Sequoia - Generative AI's Act o1",
+      "status": "ingested",
+      "url": "https://sequoiacap.com/article/generative-ais-act-o1/",
+      "chars": 21079,
+      "path": "data\\raw_sources\\conceptual_ai_native\\concept-sequoia-generative-ai-act-o1.json"
+    },
+    {
+      "id": "concept-emergence-ai-native-services",
+      "title": "Emergence - AI-Native Services",
+      "status": "ingested",
+      "url": "https://www.emcap.com/ai-native-services",
+      "chars": 1310,
+      "path": "data\\raw_sources\\conceptual_ai_native\\concept-emergence-ai-native-services.json"
+    },
+    {
+      "id": "concept-crv-ai-wrapper",
+      "title": "CRV - What is an AI Wrapper",
+      "status": "ingested",
+      "url": "https://www.crv.com/content/what-is-an-ai-wrapper",
+      "chars": 13948,
+      "path": "data\\raw_sources\\conceptual_ai_native\\concept-crv-ai-wrapper.json"
+    },
+    {
+      "id": "case-cloudwalk-infinitepay",
+      "title": "CloudWalk / InfinitePay",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 461,
+      "path": "data\\raw_sources\\historical_cases\\case-cloudwalk-infinitepay.json"
+    },
+    {
+      "id": "case-qi-tech",
+      "title": "QI Tech",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 420,
+      "path": "data\\raw_sources\\historical_cases\\case-qi-tech.json"
+    },
+    {
+      "id": "case-stark-bank",
+      "title": "Stark Bank",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 437,
+      "path": "data\\raw_sources\\historical_cases\\case-stark-bank.json"
+    },
+    {
+      "id": "case-laura",
+      "title": "Laura",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 430,
+      "path": "data\\raw_sources\\historical_cases\\case-laura.json"
+    },
+    {
+      "id": "case-noleak",
+      "title": "Noleak",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 435,
+      "path": "data\\raw_sources\\historical_cases\\case-noleak.json"
+    },
+    {
+      "id": "case-wuri",
+      "title": "Wuri",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 424,
+      "path": "data\\raw_sources\\historical_cases\\case-wuri.json"
+    },
+    {
+      "id": "case-codewhisper",
+      "title": "CodeWhisper",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 437,
+      "path": "data\\raw_sources\\historical_cases\\case-codewhisper.json"
+    },
+    {
+      "id": "case-cydoc",
+      "title": "Cydoc",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 443,
+      "path": "data\\raw_sources\\historical_cases\\case-cydoc.json"
+    },
+    {
+      "id": "case-jasper-ai",
+      "title": "Jasper AI",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 432,
+      "path": "data\\raw_sources\\historical_cases\\case-jasper-ai.json"
+    },
+    {
+      "id": "case-builder-ai",
+      "title": "Builder.ai",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 459,
+      "path": "data\\raw_sources\\historical_cases\\case-builder-ai.json"
+    },
+    {
+      "id": "golden-fintech-ai-native-cloudwalk-qi-tech",
+      "title": "Golden set - CloudWalk e QI Tech",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 389,
+      "path": "data\\raw_sources\\golden_set\\golden-fintech-ai-native-cloudwalk-qi-tech.json"
+    },
+    {
+      "id": "golden-healthtech-laura-oncoai",
+      "title": "Golden set - Laura e OncoAI",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 316,
+      "path": "data\\raw_sources\\golden_set\\golden-healthtech-laura-oncoai.json"
+    },
+    {
+      "id": "golden-computer-vision-noleak-mr-turing",
+      "title": "Golden set - Noleak e Mr. Turing",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 306,
+      "path": "data\\raw_sources\\golden_set\\golden-computer-vision-noleak-mr-turing.json"
+    },
+    {
+      "id": "golden-banking-infra-stark-bank",
+      "title": "Golden set - Stark Bank",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 247,
+      "path": "data\\raw_sources\\golden_set\\golden-banking-infra-stark-bank.json"
+    },
+    {
+      "id": "golden-wrapper-risk-wuri",
+      "title": "Golden set - Wuri",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 319,
+      "path": "data\\raw_sources\\golden_set\\golden-wrapper-risk-wuri.json"
+    },
+    {
+      "id": "golden-devtools-codewhisper",
+      "title": "Golden set - CodeWhisper",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 261,
+      "path": "data\\raw_sources\\golden_set\\golden-devtools-codewhisper.json"
+    },
+    {
+      "id": "golden-healthtech-go-to-market-cydoc",
+      "title": "Golden set - Cydoc",
+      "status": "ingested",
+      "url": "docs/guia-completo-do-case.md",
+      "chars": 286,
+      "path": "data\\raw_sources\\golden_set\\golden-healthtech-go-to-market-cydoc.json"
+    }
+  ],
+  "failed": [],
+  "blocked": []
+}

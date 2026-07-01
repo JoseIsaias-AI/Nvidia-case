@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-noleak",
+  "title": "Noleak",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.375998+00:00",
+  "text": "# Noleak\n\n## Tipo\nsucesso\n\n## Setor\nSeguranca\n\n## Caracteristicas\ndata_moat, infra_propria\n\n## O que aconteceu\nUsa Metropolis, GPUs, TensorRT e Triton para video analytics.\n\n## Licao estruturada\nStack NVIDIA nativa e P&D academico indicam ICP ideal.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "173073a82a5b04e00f1bf031280ac50f8026937adfa3440545eb58b3b2d820cc",
+  "metadata": {
+    "tecnologia": "Noleak",
+    "categoria": "Seguranca",
+    "problema_que_resolve": "Usa Metropolis, GPUs, TensorRT e Triton para video analytics.",
+    "descricao_negocio": "Stack NVIDIA nativa e P&D academico indicam ICP ideal.",
+    "descricao_tecnica": "# Noleak\n\n## Tipo\nsucesso\n\n## Setor\nSeguranca\n\n## Caracteristicas\ndata_moat, infra_propria\n\n## O que aconteceu\nUsa Metropolis, GPUs, TensorRT e Triton para video analytics.\n\n## Licao estruturada\nStack NVIDIA nativa e P&D academico indicam ICP ideal.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Seguranca",
+      "sucesso",
+      "data moat",
+      "infra propria",
+      "",
+      ""
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.375998+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

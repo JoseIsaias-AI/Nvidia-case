@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "golden-banking-infra-stark-bank",
+  "title": "Golden set - Stark Bank",
+  "collection": "golden_set",
+  "document_type": "golden_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.476023+00:00",
+  "text": "# Golden set - Stark Bank\n\nPergunta: fintech de infraestrutura bancaria B2B, com integracao profunda e automacao, tem moat mais forte que uma UI generica?\n\nFontes esperadas no top-5: RAPIDS, NVIDIA AI Enterprise, NeMo Guardrails e caso Stark Bank.",
+  "text_sha256": "365c33a1ed73a123e63e54d8fe33f5801eca3cddf48dd00ae7c3c33d63605772",
+  "metadata": {
+    "tecnologia": "RAPIDS / NVIDIA AI Enterprise",
+    "categoria": "Fintech infra B2B",
+    "problema_que_resolve": "Infra B2B regulada precisa de dados acelerados e plataforma enterprise.",
+    "descricao_negocio": "Deve recuperar RAPIDS, AI Enterprise, Guardrails e Inception.",
+    "descricao_tecnica": "# Golden set - Stark Bank\n\nPergunta: fintech de infraestrutura bancaria B2B, com integracao profunda e automacao, tem moat mais forte que uma UI generica?\n\nFontes esperadas no top-5: RAPIDS, NVIDIA AI Enterprise, NeMo Guardrails e caso Stark Bank.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "infra bancaria",
+      "enterprise",
+      "compliance",
+      "dados tabulares",
+      "automacao"
+    ],
+    "casos_de_uso_tipicos": [
+      "core bancario",
+      "automacao financeira",
+      "enterprise AI"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.476023+00:00",
+    "document_priority": 1.0,
+    "collection": "golden_set"
+  }
+}

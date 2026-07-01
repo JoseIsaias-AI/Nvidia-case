@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-stark-bank",
+  "title": "Stark Bank",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.359698+00:00",
+  "text": "# Stark Bank\n\n## Tipo\nsucesso\n\n## Setor\nFintech/Infra\n\n## Caracteristicas\ndata_moat, infra_propria, setor_regulado\n\n## O que aconteceu\nInfra bancaria B2B com automacao por IA.\n\n## Licao estruturada\nMoat de integracao pode ser mais forte que interface.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "81ddfdddf56f48b43884a3eb2912019a7adb03289840539ece27698d3530116c",
+  "metadata": {
+    "tecnologia": "Stark Bank",
+    "categoria": "Fintech/Infra",
+    "problema_que_resolve": "Infra bancaria B2B com automacao por IA.",
+    "descricao_negocio": "Moat de integracao pode ser mais forte que interface.",
+    "descricao_tecnica": "# Stark Bank\n\n## Tipo\nsucesso\n\n## Setor\nFintech/Infra\n\n## Caracteristicas\ndata_moat, infra_propria, setor_regulado\n\n## O que aconteceu\nInfra bancaria B2B com automacao por IA.\n\n## Licao estruturada\nMoat de integracao pode ser mais forte que interface.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Fintech/Infra",
+      "sucesso",
+      "data moat",
+      "infra propria",
+      "",
+      "setor regulado"
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.359698+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

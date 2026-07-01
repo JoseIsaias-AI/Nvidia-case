@@ -20,6 +20,9 @@ def slugify(value: str, fallback: str = "startup") -> str:
 def briefing_markdown(run: dict[str, Any]) -> str:
     """Return a complete Markdown briefing for one persisted run."""
 
+    if run.get("review_status", "aprovado") != "aprovado":
+        raise ValueError("Briefing ainda nao aprovado para envio.")
+
     briefing = run.get("briefing_en") or run.get("briefing_pt") or ""
     metadata = [
         "<!-- NVIDIA Startup AI Radar export -->",

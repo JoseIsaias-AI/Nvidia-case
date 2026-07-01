@@ -1,0 +1,126 @@
+{
+  "schema_version": "pipeline_golden_set_v1",
+  "source": "docs/guia-completo-do-case.md#golden-set",
+  "cases": [
+    {
+      "id": "cloudwalk-infinitepay",
+      "question_id": "P1",
+      "startup_name": "CloudWalk / InfinitePay",
+      "sector": "Fintech",
+      "input_text": "A CloudWalk, dona do InfinitePay, usa IA e blockchain proprietario para processamento de pagamentos, atende micro e pequenos empreendedores em mais de 5.000 municipios e ja operou a internacionalizacao do negocio com a marca Jim.com nos Estados Unidos.",
+      "expected_classification": "AI-native",
+      "expected_priority": "alta",
+      "expected_technologies": ["RAPIDS", "NeMo Guardrails", "NVIDIA Inception"],
+      "expected_human_review": false,
+      "expected_rationale": "IA no nucleo do negocio financeiro, dados transacionais proprietarios e setor regulado."
+    },
+    {
+      "id": "qi-tech",
+      "question_id": "P1",
+      "startup_name": "QI Tech",
+      "sector": "Fintech",
+      "input_text": "A QI Tech se tornou o unico novo unicornio latino-americano de 2024 usando IA para analise de credito e automacao de operacoes financeiras em infraestrutura financeira regulada.",
+      "expected_classification": "AI-native",
+      "expected_priority": "alta",
+      "expected_technologies": ["RAPIDS", "NeMo Guardrails", "NVIDIA Inception"],
+      "expected_human_review": false,
+      "expected_rationale": "IA aplicada a credito e automacao financeira em setor regulado."
+    },
+    {
+      "id": "laura",
+      "question_id": "P2",
+      "startup_name": "Laura",
+      "sector": "Healthtech",
+      "input_text": "A Laura aplica IA cognitiva ao monitoramento hospitalar e a deteccao precoce de riscos clinicos como sepse, coletando dados em tempo real de prontuarios eletronicos e emitindo alertas preditivos.",
+      "expected_classification": "AI-native",
+      "expected_priority": "alta",
+      "expected_technologies": ["NVIDIA Clara", "NeMo Guardrails", "NVIDIA Inception"],
+      "expected_human_review": false,
+      "expected_rationale": "Healthtech vertical com dados clinicos proprietarios, prontuario e regulacao."
+    },
+    {
+      "id": "oncoai",
+      "question_id": "P2",
+      "startup_name": "OncoAI",
+      "sector": "Healthtech",
+      "input_text": "A OncoAI oferece uma plataforma de IA para prever a recorrencia do cancer e otimizar decisoes de tratamento em oncologia, operando com dados clinicos sensiveis e necessidade de governanca.",
+      "expected_classification": "AI-native",
+      "expected_priority": "alta",
+      "expected_technologies": ["NVIDIA Clara", "NeMo Guardrails", "NVIDIA Inception"],
+      "expected_human_review": false,
+      "expected_rationale": "IA clinica vertical em oncologia, com dado sensivel e necessidade de compliance."
+    },
+    {
+      "id": "noleak",
+      "question_id": "P3",
+      "startup_name": "Noleak",
+      "sector": "Seguranca",
+      "input_text": "A Noleak usa NVIDIA Metropolis, GPUs, TensorRT e Triton Inference Server para detectar comportamentos suspeitos por cameras de seguranca, com tecnologia proprietaria desenvolvida em parceria com universidades brasileiras e canadenses.",
+      "expected_classification": "AI-native",
+      "expected_priority": "alta",
+      "expected_technologies": ["Triton Inference Server", "TensorRT-LLM", "NVIDIA Inception"],
+      "expected_human_review": false,
+      "expected_rationale": "Stack NVIDIA explicita, visao computacional, tecnologia proprietaria e P&D academico."
+    },
+    {
+      "id": "mr-turing",
+      "question_id": "P3",
+      "startup_name": "Mr. Turing",
+      "sector": "AI automation",
+      "input_text": "A Mr. Turing combina visao computacional e processamento de linguagem natural para interpretar documentos de forma quase humana, rodando em instancias GPU NVIDIA T4 tanto em desenvolvimento quanto em producao na AWS.",
+      "expected_classification": "AI-native",
+      "expected_priority": "alta",
+      "expected_technologies": ["Triton Inference Server", "TensorRT-LLM", "NVIDIA Inception"],
+      "expected_human_review": false,
+      "expected_rationale": "Uso de GPU NVIDIA em producao com visao computacional e NLP no produto central."
+    },
+    {
+      "id": "stark-bank",
+      "question_id": "P4",
+      "startup_name": "Stark Bank",
+      "sector": "Fintech/Infra",
+      "input_text": "A Stark Bank oferece infraestrutura bancaria B2B, incluindo PIX, boletos e transferencias para outras empresas, com automacao por IA desde o inicio, e e apontada como potencial candidata ao primeiro unicornio de IA nativo do Brasil.",
+      "expected_classification": "AI-native",
+      "expected_priority": "alta",
+      "expected_technologies": ["RAPIDS", "NVIDIA AI Enterprise", "NeMo Guardrails", "NVIDIA Inception"],
+      "expected_human_review": false,
+      "expected_rationale": "Infraestrutura B2B regulada com automacao profunda e potencial de AI-native."
+    },
+    {
+      "id": "wuri",
+      "question_id": "P5",
+      "startup_name": "Wuri",
+      "sector": "IA generativa",
+      "input_text": "A Wuri comecou como app de geracao de novelas visuais com IA generativa, pivotou para solucoes de IA empresarial e wrappers de IA, passou pela Y Combinator, mas nunca travou em um mercado especifico. Conforme plataformas maiores lancavam recursos proprios, sua oferta passou a parecer infraestrutura comoditizada com uma camada de interface fina.",
+      "expected_classification": "non-AI",
+      "expected_priority": "baixa",
+      "expected_technologies": [],
+      "expected_human_review": true,
+      "expected_rationale": "Padrao de wrapper fino, pivots e baixa defensibilidade; nao prioritario sem pivot tecnico claro."
+    },
+    {
+      "id": "codewhisper",
+      "question_id": "P6",
+      "startup_name": "CodeWhisper",
+      "sector": "Dev tools",
+      "input_text": "A CodeWhisper fechou em julho de 2025 depois que a OpenAI lancou um modo de debug avancado que fazia tudo que o produto fazia, incluido no plano ChatGPT Plus de US$20 por mes.",
+      "expected_classification": "non-AI",
+      "expected_priority": "baixa",
+      "expected_technologies": [],
+      "expected_human_review": true,
+      "expected_rationale": "Diferencial inteiro replicavel por atualizacao nativa de provedor de modelo."
+    },
+    {
+      "id": "cydoc",
+      "question_id": "P7",
+      "startup_name": "Cydoc",
+      "sector": "Healthtech",
+      "input_text": "A Cydoc operou por sete anos como startup de IA em saude, alcancou clientes pagantes, patentes e impacto clinico demonstrado, mas seu fundador concluiu que implantar IA em saude e so 20% do desafio; os outros 80%, como integracao de workflow, infraestrutura de vendas e modelo de negocio sustentavel, sao onde a maioria das health AI companies falha.",
+      "expected_classification": "AI-enabled",
+      "expected_priority": "media",
+      "expected_technologies": ["NVIDIA Clara", "NeMo Guardrails", "NVIDIA Inception"],
+      "expected_human_review": true,
+      "expected_rationale": "Tecnologia de IA validada em saude, mas com risco alto de adocao, integracao e go-to-market."
+    }
+  ]
+}

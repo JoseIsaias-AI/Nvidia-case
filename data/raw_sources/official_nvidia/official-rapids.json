@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-rapids",
+  "title": "RAPIDS",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/rapids/index.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:43.243213+00:00",
+  "text": "The RAPIDS data science framework is a collection of libraries for running end-to-end data science pipelines completely on the GPU. The interaction is designed to have a familiar look and feel to working in Python, but utilizes optimized NVIDIA CUDA primitives and high-bandwidth GPU memory under the hood.\n\n        Install Guides, User Manuals, and more.\n    \n\n    \n        Find all RAPIDS Release Notes here.",
+  "text_sha256": "f3bfe79f7882efce62ac47f6152621dd1ac746d4d9e1ea59a7e4e595e32f06fd",
+  "metadata": {
+    "tecnologia": "RAPIDS",
+    "categoria": "Data processing",
+    "problema_que_resolve": "Acelerar pipelines de data science e ML em GPU.",
+    "descricao_negocio": "Reduz tempo de processamento e experimentacao em times de dados.",
+    "descricao_tecnica": "The RAPIDS data science framework is a collection of libraries for running end-to-end data science pipelines completely on the GPU. The interaction is designed to have a familiar look and feel to working in Python, but utilizes optimized NVIDIA CUDA primitives and high-bandwidth GPU memory under the hood.\n\n        Install Guides, User Manuals, and more.\n    \n\n    \n        Find all RAPIDS Release Notes here.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "dados tabulares",
+      "cudf",
+      "cuml",
+      "etl",
+      "analytics"
+    ],
+    "casos_de_uso_tipicos": [
+      "fintech",
+      "fraude",
+      "risco de credito",
+      "data science"
+    ],
+    "fonte_url": "https://docs.nvidia.com/rapids/index.html",
+    "source_url": "https://docs.nvidia.com/rapids/index.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:43.243213+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

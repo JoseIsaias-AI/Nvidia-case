@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "golden-healthtech-go-to-market-cydoc",
+  "title": "Golden set - Cydoc",
+  "collection": "golden_set",
+  "document_type": "golden_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.507023+00:00",
+  "text": "# Golden set - Cydoc\n\nPergunta: healthtech com tecnologia validada, mas risco em vendas, integracao e modelo de negocio deve receber qual recomendacao?\n\nFontes esperadas no top-5: Cydoc como fracasso, NVIDIA Clara para stack tecnica e NVIDIA Inception para diagnostico, parceiros e GTM.",
+  "text_sha256": "1c7a72fbe8063215e0ca54f1f44d17d58afce00678e1c52a353ff7b33680e456",
+  "metadata": {
+    "tecnologia": "NVIDIA Clara / NVIDIA Inception",
+    "categoria": "Healthtech go-to-market",
+    "problema_que_resolve": "Tecnologia clinica validada ainda pode falhar por vendas, integracao e negocio.",
+    "descricao_negocio": "Deve recuperar Cydoc, Clara e Inception para proxima acao comercial/tecnica.",
+    "descricao_tecnica": "# Golden set - Cydoc\n\nPergunta: healthtech com tecnologia validada, mas risco em vendas, integracao e modelo de negocio deve receber qual recomendacao?\n\nFontes esperadas no top-5: Cydoc como fracasso, NVIDIA Clara para stack tecnica e NVIDIA Inception para diagnostico, parceiros e GTM.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "healthtech",
+      "vendas",
+      "integracao",
+      "modelo de negocio",
+      "clinico"
+    ],
+    "casos_de_uso_tipicos": [
+      "go-to-market",
+      "saude",
+      "validacao comercial"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.507023+00:00",
+    "document_priority": 1.0,
+    "collection": "golden_set"
+  }
+}

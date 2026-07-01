@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-cloudwalk-infinitepay",
+  "title": "CloudWalk / InfinitePay",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.343259+00:00",
+  "text": "# CloudWalk / InfinitePay\n\n## Tipo\nsucesso\n\n## Setor\nFintech\n\n## Caracteristicas\ndata_moat, infra_propria, setor_regulado\n\n## O que aconteceu\nIA e blockchain proprietario para pagamentos de PMEs.\n\n## Licao estruturada\nModelo proprietario e base nichada sustentam crescimento.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "ead9a5a9a024564d72181ea63442660f172ad5c57f34c4a08199a1d406214fab",
+  "metadata": {
+    "tecnologia": "CloudWalk / InfinitePay",
+    "categoria": "Fintech",
+    "problema_que_resolve": "IA e blockchain proprietario para pagamentos de PMEs.",
+    "descricao_negocio": "Modelo proprietario e base nichada sustentam crescimento.",
+    "descricao_tecnica": "# CloudWalk / InfinitePay\n\n## Tipo\nsucesso\n\n## Setor\nFintech\n\n## Caracteristicas\ndata_moat, infra_propria, setor_regulado\n\n## O que aconteceu\nIA e blockchain proprietario para pagamentos de PMEs.\n\n## Licao estruturada\nModelo proprietario e base nichada sustentam crescimento.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Fintech",
+      "sucesso",
+      "data moat",
+      "infra propria",
+      "",
+      "setor regulado"
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.343259+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

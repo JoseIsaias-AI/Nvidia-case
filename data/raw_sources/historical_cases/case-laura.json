@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-laura",
+  "title": "Laura",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.367943+00:00",
+  "text": "# Laura\n\n## Tipo\nsucesso\n\n## Setor\nHealthtech\n\n## Caracteristicas\ndata_moat, setor_regulado\n\n## O que aconteceu\nMonitoramento hospitalar e deteccao precoce de riscos clinicos.\n\n## Licao estruturada\nDado clinico em tempo real cria barreira alta.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "e2a2832a93414f8602c8097715c519b1246e902ce69ae025689add60454a5704",
+  "metadata": {
+    "tecnologia": "Laura",
+    "categoria": "Healthtech",
+    "problema_que_resolve": "Monitoramento hospitalar e deteccao precoce de riscos clinicos.",
+    "descricao_negocio": "Dado clinico em tempo real cria barreira alta.",
+    "descricao_tecnica": "# Laura\n\n## Tipo\nsucesso\n\n## Setor\nHealthtech\n\n## Caracteristicas\ndata_moat, setor_regulado\n\n## O que aconteceu\nMonitoramento hospitalar e deteccao precoce de riscos clinicos.\n\n## Licao estruturada\nDado clinico em tempo real cria barreira alta.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Healthtech",
+      "sucesso",
+      "data moat",
+      "",
+      "",
+      "setor regulado"
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.367943+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

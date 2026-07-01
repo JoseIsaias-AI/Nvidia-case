@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "golden-fintech-ai-native-cloudwalk-qi-tech",
+  "title": "Golden set - CloudWalk e QI Tech",
+  "collection": "golden_set",
+  "document_type": "golden_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.441077+00:00",
+  "text": "# Golden set - CloudWalk e QI Tech\n\nPergunta: fintech com dados proprietarios, credito, fraude, regulacao e automacao de decisao de negocio deve ser classificada como AI-native ou apenas AI-enabled?\n\nFontes esperadas no top-5: RAPIDS para dados tabulares e fraude, NeMo Guardrails para governanca em setor regulado, NVIDIA NIM se houver LLM/API externa, NVIDIA Inception como proxima acao.",
+  "text_sha256": "de6b53d8cad03278920d7d0f46a36b5f1c26793931a6cb2364f0e9655a586cea",
+  "metadata": {
+    "tecnologia": "RAPIDS / NeMo Guardrails / NVIDIA NIM",
+    "categoria": "Fintech regulada",
+    "problema_que_resolve": "Fintechs AI-native com dados proprietarios e decisao de negocio dependente de IA.",
+    "descricao_negocio": "Devem recuperar RAPIDS, governanca e caminho Inception/NIM quando houver LLM.",
+    "descricao_tecnica": "# Golden set - CloudWalk e QI Tech\n\nPergunta: fintech com dados proprietarios, credito, fraude, regulacao e automacao de decisao de negocio deve ser classificada como AI-native ou apenas AI-enabled?\n\nFontes esperadas no top-5: RAPIDS para dados tabulares e fraude, NeMo Guardrails para governanca em setor regulado, NVIDIA NIM se houver LLM/API externa, NVIDIA Inception como proxima acao.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "fintech",
+      "credito",
+      "fraude",
+      "dados tabulares",
+      "setor regulado"
+    ],
+    "casos_de_uso_tipicos": [
+      "credito",
+      "fraude",
+      "pagamentos",
+      "compliance"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.441077+00:00",
+    "document_priority": 1.0,
+    "collection": "golden_set"
+  }
+}

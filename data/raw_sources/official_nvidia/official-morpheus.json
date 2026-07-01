@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-morpheus",
+  "title": "NVIDIA Morpheus",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/morpheus/index.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:46.031106+00:00",
+  "text": "# Welcome to Morpheus Documentation#\n\nNVIDIA Morpheus is an open AI application framework that provides cybersecurity developers with a highly optimized AI framework and pre-trained AI capabilities that allow them to instantaneously inspect all IP traffic across their data center fabric. The Morpheus developer framework allows teams to build their own optimized pipelines that address cybersecurity and information security use cases. Bringing a new level of security to data centers, Morpheus provides development capabilities around dynamic protection, real-time telemetry, adaptive policies, and cyber defenses for detecting and remediating cybersecurity threats.\n\n## Features#\n\n\n\n- Built on RAPIDS\n\nBuilt on the RAPIDSâ¢ libraries, deep learning frameworks, and NVIDIA Tritonâ¢ Inference Server, Morpheus simplifies the analysis of logs and telemetry to help detect and mitigate security threats.\n\n\n- AI Cybersecurity Capabilities\n\nDeploy your own models using common deep learning frameworks. Or get a jump-start in building applications to identify leaked sensitive information, detect malware, and identify errors via logs by using one of NVIDIAâs pre-trained and tested models.\n\n\n- Real-Time Telemetry\n\nMorpheus can receive rich, real-time network telemetry from every NVIDIAÂ® BlueFieldÂ® DPU-accelerated server in the data center without impacting performance. Integrating the framework into a third-party cybersecurity offering brings the worldâs best AI computing to communication networks.\n\n\n- DPU-Connected\n\nThe NVIDIA BlueField Data Processing Unit (DPU) can be used as a telemetry agent for receiving critical data center communications into Morpheus. As an optional addition to Morpheus, BlueField DPU also extends static security logging to a sophisticated dynamic real-time telemetry model that evolves with new policies and threat intelligence.\n\n\n## Getting Started#\n\n### Using Morpheus#\n\n\nGetting Started with Morpheus - Using pre-built Docker containers, building Docker containers from source, and fetching models and datasets\n\nMorpheus Conda Packages- Using Morpheus Libraries via the pre-built Conda Packages\n\nMorpheus CLI Overview - Brief overview of the command line interface\n\nBuilding a Pipeline - Introduction to building a pipeline using the command line interface\n\nMorpheus CPU-Only Mode - Running Morpheus and designing stages for CPU-only execution mode\n\nMorpheus Examples - Example pipelines using both the Python API and command line interface\n\nPretrained Models - Pretrained models with corresponding training, validation scripts, and datasets\n\nDeveloper Guides - Covers extending Morpheus with custom stages\n\n\n### Modifying Morpheus#\n\n\nContributing to Morpheus - Covers building from source, making changes and contributing to Morpheus",
+  "text_sha256": "e41e25d67074e2f339add6c040f722add6c1b051cfce6202588163d8558a042a",
+  "metadata": {
+    "tecnologia": "NVIDIA Morpheus",
+    "categoria": "Cybersecurity AI",
+    "problema_que_resolve": "Pipelines acelerados para deteccao e mitigacao de ameacas.",
+    "descricao_negocio": "Ajuda startups de seguranca a analisar telemetria e logs em escala.",
+    "descricao_tecnica": "# Welcome to Morpheus Documentation#\n\nNVIDIA Morpheus is an open AI application framework that provides cybersecurity developers with a highly optimized AI framework and pre-trained AI capabilities that allow them to instantaneously inspect all IP traffic across their data center fabric. The Morpheus developer framework allows teams to build their own optimized pipelines that address cybersecurity and information security use cases. Bringing a new level of security to data centers, Morpheus provides development capabilities around dynamic protection, real-time telemetry, adaptive policies, and cyber defenses for detecting and remediating cybersecurity threats.\n\n## Features#\n\n\n\n- Built on RAPIDS\n\nBuilt on the RAPIDSâ¢ libraries, deep learning frameworks, and NVIDIA Tritonâ¢ Inference Server, Morpheus simplifies the analysis of logs and telemetry to help detect and mitigate security threat",
+    "complexidade_implementacao": "alta",
+    "sinais_de_gatilho": [
+      "cybersecurity",
+      "telemetria",
+      "logs",
+      "anomalia",
+      "ameacas"
+    ],
+    "casos_de_uso_tipicos": [
+      "SIEM",
+      "deteccao de ameacas",
+      "fraude"
+    ],
+    "fonte_url": "https://docs.nvidia.com/morpheus/index.html",
+    "source_url": "https://docs.nvidia.com/morpheus/index.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:46.031106+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

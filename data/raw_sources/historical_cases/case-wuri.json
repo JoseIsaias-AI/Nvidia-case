@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-wuri",
+  "title": "Wuri",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.384411+00:00",
+  "text": "# Wuri\n\n## Tipo\nfracasso\n\n## Setor\nIA generativa\n\n## Caracteristicas\ndependencia_api_externa\n\n## O que aconteceu\nPivots sucessivos e wrappers de IA empresarial.\n\n## Licao estruturada\nPivot constante sem trava de mercado e sinal de alerta.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "bf40e5abbe9582592fa30064be70bb6c5f82b4fd5b3e44144a0a6d4980d39f26",
+  "metadata": {
+    "tecnologia": "Wuri",
+    "categoria": "IA generativa",
+    "problema_que_resolve": "Pivots sucessivos e wrappers de IA empresarial.",
+    "descricao_negocio": "Pivot constante sem trava de mercado e sinal de alerta.",
+    "descricao_tecnica": "# Wuri\n\n## Tipo\nfracasso\n\n## Setor\nIA generativa\n\n## Caracteristicas\ndependencia_api_externa\n\n## O que aconteceu\nPivots sucessivos e wrappers de IA empresarial.\n\n## Licao estruturada\nPivot constante sem trava de mercado e sinal de alerta.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "IA generativa",
+      "fracasso",
+      "",
+      "",
+      "api externa",
+      ""
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.384411+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

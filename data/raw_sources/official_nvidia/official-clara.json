@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-clara",
+  "title": "NVIDIA Clara",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/clara/index.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:45.145826+00:00",
+  "text": "NVIDIA® Clara™ is a platform of AI applications and accelerated frameworks for healthcare developers, researchers, and medical device makers creating AI solutions to improve healthcare delivery and accelerate drug discovery. Clara’s domain-specific tools, AI pre-trained models, and accelerated applications are enabling AI breakthroughs in numerous fields, including genomics, natural language processing (NLP), imaging, medical devices, drug discovery, and smart hospitals.\n\nThe link to Latest documentation is here. For older versions of the documentation, refer to the\n\n**Archives**section.\n\nThe toolkit includes a base container with MONAI Core, MONAI Label, and NVIDIA FLARE. It also features a curated library of 15 pre-trained models covering a wide range of medical imaging modalities including CT, MR, Pathology, and Endoscopy. Available on NGC, this toolkit empowers data scientists and clinical researchers to accelerate their AI development in medical imaging.\n\nNVIDIA BioNeMo’s Training Framework enables building and deploying generative AI, Large Language Models (LLMs), and foundation models in drug discovery applications. This provides the capability to pre-train or fine-tune the latest drug discovery models with end-to-end acceleration at scale on NVIDIA Base Command platform for NVIDIA DGX Cloud or on NVIDIA DGX on-prem.\n\nFeatures include: Easy data loading, with support for common biomolecular data formats; State-of-the-art models for protein and small molecule data, with out-of-the-box architectures and validated checkpoints; Optimized scaling recipes for seamless accelerated training on 1,000s of GPUs, to maximize throughput and reduce cost.",
+  "text_sha256": "72f17b14e589b7d99a03d9d28de89b1ada1412117d37c74dc7b07aa16aef2255",
+  "metadata": {
+    "tecnologia": "NVIDIA Clara",
+    "categoria": "Healthcare AI",
+    "problema_que_resolve": "Ferramentas e frameworks acelerados para IA em saude.",
+    "descricao_negocio": "Aumenta fit tecnico em startups de saude e life sciences.",
+    "descricao_tecnica": "NVIDIA® Clara™ is a platform of AI applications and accelerated frameworks for healthcare developers, researchers, and medical device makers creating AI solutions to improve healthcare delivery and accelerate drug discovery. Clara’s domain-specific tools, AI pre-trained models, and accelerated applications are enabling AI breakthroughs in numerous fields, including genomics, natural language processing (NLP), imaging, medical devices, drug discovery, and smart hospitals.\n\nThe link to Latest documentation is here. For older versions of the documentation, refer to the\n\n**Archives**section.\n\nThe toolkit includes a base container with MONAI Core, MONAI Label, and NVIDIA FLARE. It also features a curated library of 15 pre-trained models covering a wide range of medical imaging modalities including CT, MR, Pathology, and Endoscopy. Available on NGC, this toolkit empowers data scientists and cl",
+    "complexidade_implementacao": "alta",
+    "sinais_de_gatilho": [
+      "saude",
+      "healthcare",
+      "imagem medica",
+      "genomica",
+      "hospitais"
+    ],
+    "casos_de_uso_tipicos": [
+      "healthtech",
+      "imagem medica",
+      "drug discovery"
+    ],
+    "fonte_url": "https://docs.nvidia.com/clara/index.html",
+    "source_url": "https://docs.nvidia.com/clara/index.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:45.145826+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "official-nemo-framework",
+  "title": "NVIDIA NeMo Framework",
+  "collection": "official_nvidia",
+  "document_type": "official_nvidia_doc",
+  "source_url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/index.html",
+  "domain": "docs.nvidia.com",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:51.130102+00:00",
+  "text": "# Overview#\n\nNVIDIA NeMo Framework is a scalable and cloud-native generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (e.g. Automatic Speech Recognition and Text-to-Speech). It enables users to efficiently create, customize, and deploy new generative AI models by leveraging existing code and pre-trained model checkpoints.\n\nImportant\n\nThis page is focused on Speech AI, for LLM/VLM/Diffusion models support, please refer to the NeMo Framework documentation. For the NeMo Framework container, starting with 26.02, refer to Megatron-Bridgeâs documentation and release notes.\n\n## Speech AI#\n\nDeveloping conversational AI models is a complex process that involves defining, constructing, and training models within particular domains. This process typically requires several iterations to reach a high level of accuracy. It often involves multiple iterations to achieve high accuracy, fine-tuning on various tasks and domain-specific data, ensuring training performance, and preparing models for inference deployment.\n\nNeMo Framework provides support for the training and customization of Speech AI models. This includes tasks like Automatic Speech Recognition (ASR) and Text-To-Speech (TTS) synthesis. It offers a smooth transition to enterprise-level production deployment with NVIDIA Riva. To assist developers and researchers, NeMo Framework includes state-of-the-art pre-trained checkpoints, tools for reproducible speech data processing, and features for interactive exploration and analysis of speech datasets. The components of the NeMo Framework for Speech AI are as follows:\n\n- Training and Customization\n- NeMo Framework contains everything needed to train and customize speech models (ASR, Speech Classification, Speaker Recognition, Speaker Diarization, and TTS) in a reproducible manner. \n- SOTA Pre-trained Models\n- NeMo Framework provides state-of-the-art recipes and pre-trained checkpoints of several ASR and TTS models, as well as instructions on how to load them. \n- Speech Tools\n- NeMo Framework provides a set of tools useful for developing ASR and TTS models, including: - NeMo Forced Aligner (NFA) for generating token-, word- and segment-level timestamps of speech in audio using NeMoâs CTC-based Automatic Speech Recognition models. \n- Speech Data Processor (SDP), a toolkit for simplifying speech data processing. It allows you to represent data processing operations in a config file, minimizing boilerplate code, and allowing reproducibility and shareability. \n- Speech Data Explorer (SDE), a Dash-based web application for interactive exploration and analysis of speech datasets. \n- Dataset creation tool which provides functionality to align long audio files with the corresponding transcripts and split them into shorter fragments that are suitable for Automatic Speech Recognition (ASR) model training. \n- Comparison Tool for ASR Models to compare predictions of different ASR models at word accuracy and utterance level. \n- ASR Evaluator for evaluating the performance of ASR models and other features such as Voice Activity Detection. \n- Text Normalization Tool for converting text from the written form to the spoken form and vice versa (e.g. â31stâ vs âthirty firstâ). \n \n- Path to Deployment\n- NeMo models that have been trained or customized using the NeMo Framework can be optimized and deployed with NVIDIA Riva. Riva provides containers and Helm charts specifically designed to automate the steps for push-button deployment. \n\nGetting Started with Speech AI\n\n## Other Resources#\n\n### GitHub Repos#\n\n- NVIDIA-NeMo: The main repository for the NeMo Framework \n\n### Getting Help#\n\nEngage with the NeMo community, ask questions, get support, or report bugs.\n\n## Programming Languages and Frameworks#\n\n- Python: The main interface to use NeMo Framework \n- Pytorch: NeMo Framework is built on top of PyTorch \n\n## Licenses#\n\n- NeMo Github repo is licensed under the Apache 2.0 license \n- NeMo Framework is licensed under the NVIDIA AI PRODUCT AGREEMENT. By pulling and using the container, you accept the terms and conditions of this license. \n- The NeMo Framework container contains Llama materials governed by the Meta Llama3 Community License Agreement.",
+  "text_sha256": "4a39bd7d8afe1e54d8cc19a571f00acbe74775d6189f568911b11c1829004ae4",
+  "metadata": {
+    "tecnologia": "NVIDIA NeMo",
+    "categoria": "Generative AI framework",
+    "problema_que_resolve": "Construir, customizar e operar modelos generativos com componentes NVIDIA.",
+    "descricao_negocio": "Ajuda startups com IA generativa profunda a sair de wrapper fino para stack propria.",
+    "descricao_tecnica": "# Overview#\n\nNVIDIA NeMo Framework is a scalable and cloud-native generative AI framework built for researchers and developers working on Large Language Models, Multimodal, and Speech AI (e.g. Automatic Speech Recognition and Text-to-Speech). It enables users to efficiently create, customize, and deploy new generative AI models by leveraging existing code and pre-trained model checkpoints.\n\nImportant\n\nThis page is focused on Speech AI, for LLM/VLM/Diffusion models support, please refer to the NeMo Framework documentation. For the NeMo Framework container, starting with 26.02, refer to Megatron-Bridgeâs documentation and release notes.\n\n## Speech AI#\n\nDeveloping conversational AI models is a complex process that involves defining, constructing, and training models within particular domains. This process typically requires several iterations to reach a high level of accuracy. It often invo",
+    "complexidade_implementacao": "alta",
+    "sinais_de_gatilho": [
+      "llm",
+      "fine-tuning",
+      "rag",
+      "agentes",
+      "treinamento",
+      "guardrails"
+    ],
+    "casos_de_uso_tipicos": [
+      "LLM customizado",
+      "RAG",
+      "agentes empresariais"
+    ],
+    "fonte_url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/index.html",
+    "source_url": "https://docs.nvidia.com/nemo-framework/user-guide/latest/index.html",
+    "data_ultima_verificacao": "2026-07-01T03:00:51.130102+00:00",
+    "document_priority": 1.25,
+    "collection": "official_nvidia"
+  }
+}

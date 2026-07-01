@@ -1,0 +1,39 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "case-codewhisper",
+  "title": "CodeWhisper",
+  "collection": "historical_cases",
+  "document_type": "historical_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.392784+00:00",
+  "text": "# CodeWhisper\n\n## Tipo\nfracasso\n\n## Setor\nDev tools\n\n## Caracteristicas\ndependencia_api_externa\n\n## O que aconteceu\nFeature principal foi replicada por provedor de modelo.\n\n## Licao estruturada\nSe o provedor copia a feature, nao ha produto defensavel.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+  "text_sha256": "e8165e42b50c14dcaa3d0a046655d06d57afc4b0abfda02e980dcbc75fa4d823",
+  "metadata": {
+    "tecnologia": "CodeWhisper",
+    "categoria": "Dev tools",
+    "problema_que_resolve": "Feature principal foi replicada por provedor de modelo.",
+    "descricao_negocio": "Se o provedor copia a feature, nao ha produto defensavel.",
+    "descricao_tecnica": "# CodeWhisper\n\n## Tipo\nfracasso\n\n## Setor\nDev tools\n\n## Caracteristicas\ndependencia_api_externa\n\n## O que aconteceu\nFeature principal foi replicada por provedor de modelo.\n\n## Licao estruturada\nSe o provedor copia a feature, nao ha produto defensavel.\n\n## Uso no radar\nEste caso entra no RAG como comparavel para julgar maturidade AI-native, risco de wrapper,\nmoat de dados, profundidade de infraestrutura e ajuste ao ecossistema NVIDIA.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "Dev tools",
+      "fracasso",
+      "",
+      "",
+      "api externa",
+      ""
+    ],
+    "casos_de_uso_tipicos": [
+      "case bank",
+      "golden set",
+      "comparacao historica"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.392784+00:00",
+    "document_priority": 0.85,
+    "collection": "historical_cases"
+  }
+}

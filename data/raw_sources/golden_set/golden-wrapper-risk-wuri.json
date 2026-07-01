@@ -1,0 +1,38 @@
+{
+  "schema_version": "rag_raw_source_v1",
+  "id": "golden-wrapper-risk-wuri",
+  "title": "Golden set - Wuri",
+  "collection": "golden_set",
+  "document_type": "golden_case",
+  "source_url": "docs/guia-completo-do-case.md",
+  "domain": "",
+  "status": "ingested",
+  "collected_at": "2026-07-01T03:00:56.482246+00:00",
+  "text": "# Golden set - Wuri\n\nPergunta: startup de IA generativa com pivots sucessivos, dependencia de API externa e pouco dado proprietario deve ser priorizada?\n\nFontes esperadas no top-5: Wuri como alerta, CRV/Sequoia/Emergence sobre defensibilidade, NVIDIA NIM para reduzir dependencia e NeMo Guardrails se houver compliance.",
+  "text_sha256": "c0a53232585924118b82083990513d30ac35843a455a8abab69c9f3d7ee3fb68",
+  "metadata": {
+    "tecnologia": "NVIDIA NIM / NeMo Guardrails",
+    "categoria": "Wrapper risk",
+    "problema_que_resolve": "Wrapper com pivots e dependencia de API deve ser tratado como risco alto.",
+    "descricao_negocio": "Deve recuperar fontes conceituais wrapper, Wuri e tecnologias de reducao de dependencia.",
+    "descricao_tecnica": "# Golden set - Wuri\n\nPergunta: startup de IA generativa com pivots sucessivos, dependencia de API externa e pouco dado proprietario deve ser priorizada?\n\nFontes esperadas no top-5: Wuri como alerta, CRV/Sequoia/Emergence sobre defensibilidade, NVIDIA NIM para reduzir dependencia e NeMo Guardrails se houver compliance.",
+    "complexidade_implementacao": "media",
+    "sinais_de_gatilho": [
+      "wrapper",
+      "api externa",
+      "openai",
+      "pivot",
+      "sem moat"
+    ],
+    "casos_de_uso_tipicos": [
+      "risco wrapper",
+      "migracao self-hosted",
+      "governanca"
+    ],
+    "fonte_url": "docs/guia-completo-do-case.md",
+    "source_url": "docs/guia-completo-do-case.md",
+    "data_ultima_verificacao": "2026-07-01T03:00:56.482246+00:00",
+    "document_priority": 1.0,
+    "collection": "golden_set"
+  }
+}
